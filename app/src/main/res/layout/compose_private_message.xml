@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/utopia_background" >
+
+    <include layout="@layout/kingdom_navigation" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FEDCBA"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:text="SELECT PROVINCE"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:id="@+id/compose_private_message_recipient_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:text="Subject:" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textSize="20sp"
+        android:padding="2dp"
+        android:gravity="top|left"
+        android:id="@+id/compose_private_message_title"
+        android:background="@drawable/edit_text_background" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:text="Message:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#303030"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="50dp"
+        android:padding="2dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/compose_private_message_content"
+            android:background="@drawable/edit_text_background"
+            android:gravity="left|top"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-50dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="SEND"
+            android:id="@+id/compose_private_message_send_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

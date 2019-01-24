@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt; KINGDOM"
+                android:id="@+id/province_back_button"
+                android:minHeight="30dp"
+                android:minWidth="50dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:background="#000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textAllCaps="false"
+                android:paddingRight="5dp"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|center_vertical"
+                android:background="#000000" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_vertical"
+                    android:id="@+id/throne_province_name"
+                    android:textColor="#FEDCBA"
+                    android:textSize="20sp"
+                    android:text="Loading Province..."/>
+
+                <com.softwareverde.util.GifView
+                    android:layout_marginRight="25dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/throne_premium_icon"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#202020"
+            android:id="@+id/province_tab_layout"
+            android:gravity="center"
+            android:visibility="gone">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.30"
+                android:text="THIEVERY"
+                android:gravity="center"
+                android:id="@+id/province_tab_thievery"
+                android:textSize="10sp"
+                android:background="@android:drawable/dialog_holo_dark_frame"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.30"
+                android:text="MAGIC"
+                android:gravity="center"
+                android:id="@+id/province_tab_magic"
+                android:textSize="10sp"
+                android:background="@android:drawable/dialog_holo_dark_frame"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.30"
+                android:text="SURVEY"
+                android:gravity="center"
+                android:id="@+id/province_tab_survey"
+                android:textSize="10sp"
+                android:background="@android:drawable/dialog_holo_dark_frame"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/throne_deployed_armies">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/throne_main_layout">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/utopia_background">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <!-- RESOURCES -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resources"
+                        android:id="@+id/resources_label"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:textColor="#A0A0A0" />
+
+                    <View
+                        android:layout_height="2dip"
+                        android:background="#808080"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Money:"
+                                android:id="@+id/throne_money_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#dad798"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_money"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Food:"
+                                android:id="@+id/throne_food_label"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#769d76"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_food"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Mana:"
+                                android:id="@+id/throne_mana_label"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#6b96b9"
+                                android:paddingRight="3dp"/>
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_mana"
+                                android:layout_gravity="center_horizontal|right"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Runes:"
+                                android:id="@+id/throne_runes_label"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#6b96b9"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_runes"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Stealth:"
+                                android:id="@+id/throne_stealth_label"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#c18d48"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_stealth"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text=""
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"/>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"
+                                    android:visibility="invisible"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_height="10dp"
+                    android:background="#50000000"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- ECONOMY -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Economy"
+                        android:id="@+id/economy_label"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:textColor="#20A020" />
+
+                    <View
+                        android:layout_height="2dip"
+                        android:background="#208020"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Land:"
+                                android:id="@+id/throne_land_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_land"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Building Eff:"
+                                android:id="@+id/throne_building_efficiency_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:autoText="false"
+                                android:gravity="center_vertical"
+                                android:paddingRight="3dp"/>
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_building_efficiency"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Peasants:"
+                                android:id="@+id/throne_peasants_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_peasants"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_peasants_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/info"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Networth:"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC"
+                                android:id="@+id/throne_networth"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_height="10dp"
+                    android:background="#50000000"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- ARMY -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Army"
+                        android:id="@+id/army_label"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:textColor="#A02020" />
+
+                    <View
+                        android:layout_height="2dip"
+                        android:background="#802020"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Offense:"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#CCCCCC"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_total_offense"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Defense:"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#CCCCCC"
+                                android:paddingRight="3dp"/>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_total_defense"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_total_defense_info"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/info"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Soldiers:"
+                                android:id="@+id/throne_soldiers_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_soldiers"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_soldiers_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Elites:"
+                                android:id="@+id/throne_elites_label"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"/>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_elites"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_elites_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Attackers:"
+                                android:id="@+id/throne_offensive_units_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_offensive_units"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_offensive_units_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Defenders:"
+                                android:id="@+id/throne_defensive_units_label"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"/>
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_defensive_units"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_defensive_units_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Horses:"
+                                android:id="@+id/throne_horses_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_horses"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Prisoners:"
+                                android:id="@+id/throne_prisoners_label"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"/>
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_prisoners"
+                                android:layout_gravity="center_horizontal|right"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/throne_army_settings_group">
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="Settings"
+                                android:textColor="#A02020"
+                                android:layout_marginRight="5dp"/>
+                            <View
+                                android:layout_height="2dip"
+                                android:background="#802020"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="-3dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="2dp"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_weight="0.25"
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text="Draft Rate:"
+                                    android:id="@+id/throne_draft_rate_label"
+                                    android:layout_gravity="center_horizontal|left"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#999999"
+                                    android:gravity="center_vertical"
+                                    android:paddingRight="3dp"/>
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25" >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:id="@+id/throne_draft_rate"
+                                        android:text="--"
+                                        android:layout_gravity="center_horizontal|left"
+                                        android:maxLines="1"
+                                        android:lines="1"
+                                        android:minLines="1"
+                                        android:singleLine="true"
+                                        android:textAlignment="center"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#CCCCCC"
+                                        android:gravity="center_vertical"
+                                        android:textIsSelectable="false"
+                                        android:layout_marginRight="-22dp" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:id="@+id/throne_draft_rate_plus_minus"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/plus_minus"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="4dp"/>
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_weight="0.25"
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text="Draft Target:"
+                                    android:id="@+id/throne_draft_target_label"
+                                    android:layout_gravity="center_vertical|left"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:paddingLeft="5dp"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#999999"
+                                    android:paddingRight="3dp"/>
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25" >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="--"
+                                        android:id="@+id/throne_draft_target"
+                                        android:layout_gravity="center_horizontal|right"
+                                        android:maxLines="1"
+                                        android:lines="1"
+                                        android:minLines="1"
+                                        android:singleLine="true"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#CCCCCC"
+                                        android:layout_marginRight="-22dp"/>
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:id="@+id/throne_draft_target_plus_minus"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/plus_minus"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="4dp"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_weight="0.25"
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text="Wage Rate:"
+                                    android:id="@+id/throne_wage_label"
+                                    android:layout_gravity="center_horizontal|left"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:paddingLeft="5dp"
+                                    android:textColor="#999999"
+                                    android:gravity="center_vertical"
+                                    android:paddingRight="3dp"/>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25" >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:id="@+id/throne_wage"
+                                        android:text="--"
+                                        android:layout_gravity="center_horizontal|left"
+                                        android:maxLines="1"
+                                        android:lines="1"
+                                        android:minLines="1"
+                                        android:singleLine="true"
+                                        android:textAlignment="center"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#CCCCCC"
+                                        android:gravity="center_vertical"
+                                        android:textIsSelectable="false"
+                                        android:layout_marginRight="-22dp" />
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:id="@+id/throne_wage_plus_minus"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/plus_minus"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="4dp"/>
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:layout_weight="0.25"
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text=""
+                                    android:layout_gravity="center_vertical|left"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:paddingLeft="5dp"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#999999"
+                                    android:paddingRight="3dp"/>
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25" >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal|right"
+                                        android:maxLines="1"
+                                        android:lines="1"
+                                        android:minLines="1"
+                                        android:singleLine="true"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="#CCCCCC"
+                                        android:layout_marginRight="-22dp"/>
+
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:layout_alignParentRight="true"
+                                        android:src="@drawable/plus_minus"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginRight="4dp"
+                                        android:visibility="invisible"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_height="10dp"
+                    android:background="#50000000"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- SPECIALISTS -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thieves &amp; Wizards"
+                        android:id="@+id/specialists_label"
+                        android:layout_gravity="center_vertical"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:textColor="#ff1c77c0" />
+
+                    <View
+                        android:layout_height="2dip"
+                        android:background="#1C77C0"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Thieves:"
+                                android:id="@+id/throne_thieves_label"
+                                android:layout_gravity="center_horizontal|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"
+                                android:gravity="center_vertical" />
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.25" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/throne_thieves"
+                                    android:layout_gravity="center_horizontal|right"
+                                    android:maxLines="1"
+                                    android:lines="1"
+                                    android:minLines="1"
+                                    android:singleLine="true"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#CCCCCC"
+                                    android:layout_marginRight="-22dp"/>
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:id="@+id/throne_thieves_plus_minus"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/plus_minus"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="4dp"/>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Wizards:"
+                                android:id="@+id/throne_wizards_label"
+                                android:layout_gravity="center_vertical|left"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical|left"
+                                android:textColor="#999999"
+                                android:paddingRight="3dp"/>
+                            <TextView
+                                android:layout_weight="0.25"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/throne_wizards"
+                                android:layout_gravity="center_horizontal|right"
+                                android:maxLines="1"
+                                android:lines="1"
+                                android:minLines="1"
+                                android:singleLine="true"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#CCCCCC" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="10dp"
+                    android:background="#50000000"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:id="@+id/throne_dragon_banner"
+            android:background="#000000"
+            android:layout_marginTop="-20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/throne_dragon_banner_text"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/aid_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/aid" />
+
+</RelativeLayout>

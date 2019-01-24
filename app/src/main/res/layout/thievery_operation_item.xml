@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#c9a989"
+    android:layout_margin="1dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="1dp"
+        android:background="#000000" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.66"
+            android:text="Thievery Operation"
+            android:id="@+id/thievery_operation_item_name"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="2dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|left"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.33"
+            android:background="#4040DD"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="2dp"
+            android:visibility="gone"
+            android:id="@+id/thievery_operation_item_target_building_container" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="#000044"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:id="@+id/thievery_operation_item_target_building" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

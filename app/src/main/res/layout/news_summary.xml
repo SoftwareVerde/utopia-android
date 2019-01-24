@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/news_summary_container"
+    android:visibility="gone" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/news_summarized"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="none"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="30dp"
+            android:layout_marginBottom="30dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#101010"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Acres:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_acres"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_acres_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="match_parent"
+                android:background="#404040"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#050505"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Peasants:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_peasants"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_peasants_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#101010"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Soldiers:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_soldiers"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_soldiers_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#050505"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Offensive Units:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_offensive_units"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_offensive_units_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#101010"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Defensive Units:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_defensive_units"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_defensive_units_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#050505"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Elites:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_elites"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_elites_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_height="2dp"
+                android:layout_width="match_parent"
+                android:background="#404040"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#101010"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Gold:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_gold"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_gold_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#050505"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Food:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_food"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_food_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#101010"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginRight="10dp"
+                    android:minWidth="150dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:text="Net Runes:" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="#FFFFFF"
+                    android:minWidth="75dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:id="@+id/news_summary_net_runes"
+                    android:text="0" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/news_summary_net_runes_sources">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/news_summary_affliction_icons"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

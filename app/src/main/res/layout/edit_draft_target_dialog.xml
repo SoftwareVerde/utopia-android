@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text_background" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Draft Target"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#EEEEEE"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Draft Target:"
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:textColor="#ABCDEF"
+        android:textIsSelectable="false"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp" >
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#FF0000"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Current Army Size:"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:minWidth="150dp"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/edit_draft_target_current_army_value"
+                android:text="0%"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp" >
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#FF9625"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Designated Army Size:"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:minWidth="150dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/edit_draft_target_desired_value"
+                android:text="0%"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp" >
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#56789A"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Current Civilian Size:"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:minWidth="150dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/edit_draft_target_current_civilian_value"
+                android:text="0%"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:id="@+id/edit_draft_target_progress_bar"
+            android:progressDrawable="@drawable/tri_progress_color"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Draft Target Percent:"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:textColor="#ABCDEF"
+        android:textIsSelectable="false"/>
+    <EditText
+        android:id="@+id/edit_draft_target_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="10dp"
+        android:hint="50"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLines="1"
+        android:minLines="1"
+        android:numeric="integer"
+        android:singleLine="true"
+    />
+</LinearLayout>

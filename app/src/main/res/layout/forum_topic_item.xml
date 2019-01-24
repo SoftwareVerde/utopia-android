@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="4dp" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:minLines="1"
+            android:id="@+id/forum_topic_item_title"
+            android:textSize="20sp"
+            android:textColor="#FEDCBA"
+            android:textStyle="bold"
+            android:text="Title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:minLines="1"
+            android:id="@+id/forum_topic_item_creator"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:textColor="#ABCDEF"
+            android:textStyle="italic"
+            android:text="Creator" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:id="@+id/forum_topic_item_post_count"
+        android:maxLines="1"
+        android:lines="1"
+        android:minLines="1"
+        android:gravity="center|center_vertical"
+        android:textSize="20sp"
+        android:textColor="#FEDCBA"
+        android:textStyle="bold"
+        android:text="1" />
+
+
+</LinearLayout>

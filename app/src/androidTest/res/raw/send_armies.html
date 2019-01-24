@@ -1,0 +1,935 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta name="google-site-verification" content="zx76jZJ5vLEImdzmHRfa_rmRl5tLM1PCUIpzawwVxO0" />
+        <title>
+            Utopia
+            -
+            War Room
+        </title>
+        <link rel="shortcut icon" href="/wol/static/common/images/fav_icon.png" />
+        
+            <!-- STYLE SHEETS -->
+            <link rel="stylesheet" type="text/css" href="/wol/static/common/css/reset.css" />
+            <link rel="stylesheet" type="text/css" href="/wol/static/external/jquery-jgrowl/jquery.jgrowl.css">
+            <link rel="stylesheet" type="text/css" href="/wol/static/common/css/layout.css" />
+            <link rel="stylesheet" type="text/css" href="/wol/static/common/css/uniform.default.css" />
+            <link rel="Stylesheet" type="text/css" href="/wol/static/common/css/ui-lightness/jquery-ui-1.8.21.custom.css"/>
+            <link rel="stylesheet" type="text/css" href="/wol/static/external/jquery-wysiwyg/jquery.wysiwyg.css">
+            <link rel="stylesheet" type="text/css" href="/wol/static/common/css/default_theme/theme.css" />
+
+            
+            
+        
+
+        <script type="text/javascript" async src="http://8ec12b9fa4007d32b5f1-a86651dc3230ac15c190dc4fedf25946.r46.cf5.rackcdn.com/uto.js?v=1"></script>
+
+        
+            <!-- SCRIPTS -->
+            <script type="text/javascript" src="/wol/static/common/js/jquery-1.8.1.min.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/jquery-ui-1.8.21.custom.min.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/jquery-plugins.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/utils.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/django_jquery_ajax.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/account_options.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/jquery.uniform.min.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/feedback.js"></script>
+            <script type="text/javascript" src="/wol/static/common/js/jquery.tools.min.js"></script>
+            <script type="text/javascript" src="/wol/static/external/jquery-c/cc.min.js"></script>
+            <script type="text/javascript" src="/wol/static/external/jquery-c/swfobject-2.2.min.js"></script>
+            <script type="text/javascript" src="/wol/static/external/jquery-wysiwyg/jquery.wysiwyg.js"></script>
+            <script type="text/javascript" src="/wol/static/external/jquery-jgrowl/jquery.jgrowl.min.js"></script>
+        
+
+        <script type="text/javascript">
+            function setupJWYSIWYG() {
+                // Style any formatted comments on the page.
+                $('textarea.formatted-text').wysiwyg({
+                    'controls': {
+                        'justifyLeft': {'visible': false},
+                        'justifyCenter': {'visible': false},
+                        'justifyRight': {'visible': false},
+                        'justifyFull': {'visible': false},
+                        'indent': {'visible': false},
+                        'outdent': {'visible': false},
+                        'undo': {'visible': false},
+                        'redo': {'visible': false},
+                        'insertHorizontalRule': {'visible': false},
+                        'insertImage': {'visible': false},
+                        'h1': {'visible': true},
+                        'h2': {'visible': false},
+                        'h3': {'visible': false},
+                        'paragraph': {'visible': false},
+                        'increaseFontSize': {'visible': false},
+                        'decreaseFontSize': {'visible': false},
+                        'html': {'visible': false},
+                        'insertTable': {'visible': false},
+                        'createLink': {'visible': false},
+                        'code': {'visible': false},
+                        'removeFormat': {'visible': false},
+                        'strikeThrough': {'visible': false},
+                        'subscript': {'visible': false},
+                        'superscript': {'visible': false}
+                    },
+                    'css': '/wol/static/common/css/default_theme/theme.css',
+                    'initialContent': '',
+                    'iFrameClass': 'formatted-comment',
+                    'autoSave': true
+                });
+            }
+
+            $(document).ready(function(eventObject) {
+                // Setup any editable text areas.
+                
+                    setupJWYSIWYG();
+                
+
+                // Setup triggers that open overlays/lightboxes
+                var overlay_params = {
+                    mask: {
+                        color: '#000000',
+                        loadSpeed: 200,
+                        opacity: 0.5
+                    }
+                };
+                $(".overlay-trigger[rel]").overlay(overlay_params);
+                // Setup uniform form styling.
+                $("select, input:checkbox, input:radio, input:file").uniform();
+
+                // Catch clicks on shop login links
+                $(".shop-login-link").click(function() {
+                    $("#id-shop-login-form").submit();
+                });
+
+                
+            });
+        </script>
+
+        
+            <script type="text/javascript">
+    (function() {
+        function async_load(script_url){
+            var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');
+            var s = document.createElement('script'); s.src = protocol + script_url;
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        }
+        bm_website_code = '386692AE089311E2'; 
+        jQuery(document).ready(function(){async_load('asset.pagefair.com/measure.min.js')});
+        jQuery(document).ready(function(){async_load('asset.pagefair.net/ads.min.js')});
+    })();
+</script>
+        
+        <!-- UA -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+    ga('create', 'UA-10656365-12', {
+        
+            'clientId': 'EFB96EF4'
+        
+    });
+
+    
+        ga('send', 'pageview');
+    
+</script>
+        <!-- PUT THIS TAG IN THE head SECTION -->
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-8478455431877379");
+  GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-8478455431877379", "Utopia_game-mid_mpu");
+  GA_googleAddSlot("ca-pub-8478455431877379", "Utopia_game-right_skyscraper");
+  GA_googleAddSlot("ca-pub-8478455431877379", "Utopia_game-top_leaderboard");
+</script>
+<script type="text/javascript">
+  GA_googleFetchAds();
+</script>
+<!-- END OF TAG FOR head SECTION -->
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-10656365-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        
+            ga.src = 'http://www.google-analytics.com/ga.js';
+        
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+</script>
+
+<script type="text/javascript">
+    // NOTE: This solution reports false positives when a user alt-tabs out of a page while hovering over an ad.
+    $(document).ready( function() {
+        // Flag that tracks whether the mouse is hovering over an iFrame.
+        var overiFrame = false;
+        infunc = function() { overiFrame = true; };
+        outfunc = function() { overiFrame = false; };
+
+        // Setup infunc, outfunc handlers for all standard IAB sizes
+        // See http://en.wikipedia.org/wiki/Web_banner
+        $('#leaderboard-ad,#skyscraper-ad,#ad-words').hover(infunc, outfunc);
+
+        user_type = function() {
+            var history = getCookie('bm_history');
+            var u_type = 'normal_user';
+
+            if (history != null){
+                var h_list = history.split(',');
+                // unblocked users have particular statuses in their history
+                // NOT_BLOCKING
+                // or FIRST_NOT_BLOCKING and !BLOCKING
+                if (h_list.indexOf('VIEWED_APPEAL') != -1
+                        && (h_list.indexOf('NOT_BLOCKING') != -1
+                        || (h_list.indexOf('FIRST_NOT_BLOCKING') != -1 && h_list.indexOf('BLOCKING') == -1))){
+
+                    u_type = 'unblocked_user';
+                }
+            }
+            return u_type;
+        }
+
+        // If the window loses focus, assume it's because the use clicked on an ad in the iframes.
+        var probable_click_reported = false;
+        $(window).blur( function(e) {
+            if(overiFrame && !probable_click_reported) {
+                _gaq.push(['_trackEvent', 'probable_ad_click', user_type()]);
+                probable_click_reported = true;
+            }
+        });
+
+        // This version is more sure to work, and is only called if the page location is about to change.
+        // However, it may not work on as many browsers and needs to be properly tested against actual adsense iframes.
+        var click_reported = false;
+        window.onbeforeunload = function() {
+            if(overiFrame && !click_reported) {
+                _gaq.push(['_trackEvent', 'definite_ad_click', user_type()]);
+                click_reported = true;
+            }
+        };
+    });
+</script>
+
+        
+    
+        
+    <script type="text/javascript" src="/wol/static/common/js/jquery.selectbox-0.5.js"></script>
+    <script type="text/javascript" src="/wol/static/common/js/bookmark_options.js"></script>
+
+    
+
+    </head>
+
+    <body>
+        <!-- Facebook like API follows. -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+            <div id="outer-container">
+                <div id="inner-container">
+                    
+                        <div id="header">
+                            
+                                <a href="/shared//"><div id="header-logo"></div></a>
+                            
+                            <div id="header-navigation">
+                                
+                                    <div class="navigation"><a href="/shared/lobby/">Lobby</a></div>
+                                    <div class="navigation"><a class="shop-login-link" href="#">Shop</a></div>
+                                    <div class="navigation"><a href="/shared/common/ranking_archive/">Rankings</a></div>
+                                
+                                <div class="navigation"><a href="http://forums.utopia-game.com/forumdisplay.php?1527-Utopia">Forum</a></div>
+                                <div class="navigation"><a href="http://wiki.utopia-game.com/index.php?title=Game_Rules">Rules</a></div>
+                                <div class="navigation"><a href="http://wiki.utopia-game.com/">Guide</a></div>
+                                <div class="navigation"><a href="http://blog.utopia-game.com/">Blog</a></div>
+                            </div>
+
+                            
+                            <div>
+                                <form id="id-shop-login-form" method="post" action="http://shop.utopia-game.com/account_management/login_from_game/">
+                                    <input type="hidden" name="auth_token" value="RmHszhX8rhyrJFCr/a0sV0pBNFpmsHztpLrVNSiId5Nj3rznQlay56bBgg6JNPinvvd2Ewh9Z6uPId7qsJnVHnwvhce2ZiAa5pPIGRCqEyYq5fhGT7wNV/eACchHuaBuUNER3A8049MxTuTgiDS7r3zY6NBsKyomwhi+p6RTvzD0mr4sCzzfAJsCTvQmqearJmbN5j8ConjnH6Y39CfZ/g==" />
+                                    <input type="hidden" name="checksum" value="8e671e0a592f9199d17dd297967c2a19" />
+                                </form>
+                            </div>
+                                <div id="account-container">
+                                    <div id="account-header" rel="#account-details">
+                                        
+                                            <div class="account-image"></div>
+                                        
+                                        <div class="account-name">
+                                            
+                                                Josh
+                                            
+                                        </div>
+                                        <div class="down-arrow"></div>
+                                    </div>
+                                    <div id="account-details" class="shadow navigation">
+                                        <div class="account-title">Account Details</div>
+                                        <div class="account-summary">
+                                            <div>Josh Green</div>
+                                            <div>joshmg@gmail.com</div>
+                                            
+
+                                            
+                                        </div>
+                                        <div id="account-links">
+                                            <div id="account-link-remove-ads"><a href="/shared/adblocker/update/">Remove&nbsp;Advertising</a></div>
+                                            <div id="account-link-edit-profile"><a href="/shared//user_profile_edit/">Public&nbsp;Profile</a></div>
+                                            <div id="account-link-settings"><a href="/shared//account_settings/">Account&nbsp;Settings</a></div>
+                                            <div id="account-link-report-bug"><a href="/shared/feedback/report_bug_instructions/">Report&nbsp;Bug</a></div>
+                                        </div>
+                                        
+
+                                        <div class="account-signout"><a href="/shared//logout/?next=/">Log&nbsp;Out</a></div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+
+                    <div id="middle">
+                        <div id="left-column">
+
+                                
+                                    
+                                        
+                                            <div style="width: 750px;height: 90px;padding: 5px;margin-left: 100px;">
+
+    <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-5229636934656944";
+        /* Utopia Top Leaderboard */
+        google_ad_slot = "6195952045";
+        google_ad_width = 728;
+        google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+    <div id="1822111901" zone_id="1822111901" class="pagefair-acceptable"></div>
+</div>
+                                        
+                                    
+                                
+
+                            <div id="content-area">
+                                
+
+    
+    <div id="game-navigation">
+        <div class="current-date">Feb 10, YR8</div>
+
+        
+        <div class="navigation">
+            <div><a href="/wol/game/throne">Throne</a></div>
+            <div><a href="/wol/game/kingdom_details">Kingdom</a></div>
+            <div><a href="/wol/game/province_news">News</a></div>
+        </div>
+
+
+        
+        <div class="navigation">
+            <div><a href="/wol/game/explore">Explore</a></div>
+            <div><a href="/wol/game/build">Growth</a></div>
+            <div><a href="/wol/game/science">Sciences</a></div>
+            <div><a href="/wol/game/train_army">Military</a></div>
+            <div><a href="/wol/game/wizards">Wizards</a></div>
+        </div>
+
+        
+        <div class="navigation">
+            <div><a href="/wol/game/enchantment">Mystics</a></div>
+            <div><a href="/wol/game/thievery">Thievery</a></div>
+            <div><a href="/wol/game/send_armies">War&nbsp;Room</a></div>
+            <div><a href="/wol/game/aid">Aid</a></div>
+
+            
+                
+                    
+                        <div><a href="/wol/game/fund_dragon">Dragons</a></div>
+                    
+                
+            
+        </div>
+
+        
+        <div class="navigation">
+            <div><a href="/wol/mail/inbox/">Mail</a></div>
+            <div><a href="/wol/kingdom_forum/topics/">Forum</a></div>
+            
+                <div><a href="/wol/war_forum/topics/">War&nbsp;Forum</a></div>
+            
+        </div>
+
+        
+        <div class="navigation">
+            
+            
+
+            <div><a href="/wol/game/vote">Politics</a></div>
+            <div><a href="/wol/game/ranking">Rankings</a></div>
+        </div>
+
+        
+        <div class="navigation">
+            <div><a href="/wol/game/preferences/">Preferences</a></div>
+        </div>
+    </div>
+    
+
+    
+        
+
+    <table id="resource-bar">
+        <thead>
+            <tr>
+                <th>Money</th>
+                <th>Peasants</th>
+                <th>Food</th>
+                <th>Runes</th>
+                <th>Net Worth</th>
+                <th>Land</th>
+                <th>Net Worth/Acre</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            
+            
+            
+
+                
+
+            <tr>
+                <th>360,233</th>
+                <th>12,718</th>
+                <th>83,831</th>
+                <th>5,862</th>
+                <th>194,860</th>
+                <th>1,267</th>
+                <th>153.796</th>
+            </tr>
+
+            
+            
+            
+        </tbody>
+    </table>
+
+
+    
+    
+                                
+
+    <div class="game-header">
+    
+    
+    
+    <h1>War Room</h1>
+    <a href="/wol/game/province_target_finder"><h1>Potential targets</h1></a>
+
+    </div>
+
+    <div class="game-content">
+    
+    
+    
+
+    <p>You enter your War Room. Surrounded by your most highly ranked military commanders, you stand ready to give orders to your troops. However, like most military commanders, none are willing to offer their advice. The decisions you make must be your own.</p><p>You can learn more about attack options from the <a href="http://wiki.utopia-game.com/index.php/Special:Search?search=military">guide</a>, and read a report on your current military status on the <a href="/wol/game/council_military">Military Council</a> page.</p>
+
+    
+
+    <table class="two-column-stats">
+        <tbody>
+            <tr>
+                <th>Deployable Generals</th>
+                <td>4</td>
+
+                <th>Mercenary Cost</th>
+                <td>350 gold coins</td>
+            </tr>
+            <tr>
+                
+                    <th>Minimum Conquest NW</th>
+                    <td>185,117 gold coins</td>
+                
+
+                <th>Mercenary Rate</th>
+                <td>One per 5.0 Troops</td>
+            </tr>
+
+            <tr>
+                
+                    <th>Maximum Conquest NW</th>
+                    <td>204,603 gold coins</td>
+                
+                <th colspan="2">
+                    <a href="/wol/game/council_military">More....</a>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+    
+        
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //Auto submit Change Kingdom form on bookmark selection
+        $(".use-shortcut").click(function () {
+            $("#id_kingdom").val($(this).attr("kingdom_num"));
+            $("#id_island").val($(this).attr("island_num"));
+            $("#change-kingdom-button").click();
+        });
+
+        //Submit add bookmark form on link click
+        $("#id_add_bookmark_link").click(function () {
+            // Copy values from change kingdom form
+            $("#id_add_bookmark_form [name='kingdom_number']").val($("#id_kingdom").val());
+            $("#id_add_bookmark_form [name='island_number']").val($("#id_island").val());
+            $("#id_add_bookmark_form [name='next_url']").val($("#id_next_url").val());
+            $("#id_add_bookmark_form").submit();
+        });
+
+        
+    });
+</script>
+
+<form id="id_add_bookmark_form" method="POST" action="/wol/game/bookmarks/add">
+    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='EqG5MHYfPIb1LLHnz3XkTLPmWLKUPXua' /></div>
+    <input type="hidden" name="kingdom_number" />
+    <input type="hidden" name="island_number" />
+    <input type="hidden" name="next_url" />
+</form>
+
+
+
+
+<form method="POST" action="/wol/game/change_kingdom/" class="change-kingdom change-kingdom-target" >
+
+    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='EqG5MHYfPIb1LLHnz3XkTLPmWLKUPXua' /></div>
+    <div class="change-kingdom-heading">
+        
+            
+                Target kingdom is Templars at war (<a href="/wol/game/kingdom_details/1/6">1:6</a>)
+            
+       
+    </div>
+
+    
+
+    <div id="royal-commands" style="display: none;">
+        <table>
+            
+            <tr id="new-royal-command" style="display: none;">
+                <th class="kingdom-label">Templars at war (<a href="/wol/game/kingdom_details/1/6">1:6</a>)</th>
+                <td id="new-royal-command-content"></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <input type="hidden" name="next_url" value="/wol/game/send_armies" id="id_next_url" />
+    <div class="change-kingdom-form">
+
+        
+            <div id="royal-command-container"></div>
+        
+
+        <div id="bookmark-container" title="Bookmarks">
+            <div id="bookmark-header"></div>
+            <div id="bookmark-details" class="navigation">
+                <div><a id="id_add_bookmark_link" href="#add">Add to bookmarks</a></div>
+                
+            </div>
+        </div>
+
+
+        <input name="kingdom" value="1" class="two-digit-input" maxlength="2" type="text" id="id_kingdom" />&nbsp;:&nbsp;<input name="island" value="6" class="two-digit-input" maxlength="2" type="text" id="id_island" />
+        <input type="submit" value="Go" name="change_kingdom" id="change-kingdom-button" />
+        <div class="change-kingdom-errors">
+            
+            
+            
+            
+        </div>
+    </div>
+</form>
+
+        
+
+            <script type="text/javascript">
+
+                field_changed = false;
+                function mark_field_changed(){
+                    field_changed = true;
+                }
+
+                function calculate_offensive_ratio(){
+                    offensive_points = parseInt($("#id_total_offense_points").text());
+
+                    if (isNaN(offensive_points)){
+                        ratio = '?';
+                    }
+                    else {
+                        target_defense = parseInt($('#id_target_defense').val());
+                        if (isNaN(target_defense)){
+                            ratio = '?';
+                        }
+                        else {
+                            ratio = (offensive_points * 100.0 / target_defense).toFixed(2);
+                        }
+                    }
+                    $("#id_offensive_ratio").text(ratio);
+                }
+
+                $(document).ready(function(){
+                    // Listen for changes on select and input fields
+                    $(".offensive-points-field input").change(mark_field_changed);
+                    $(".offensive-points-field select").change(mark_field_changed);
+                    $(".target-points-field input").change(calculate_offensive_ratio);
+
+                    // Call the function in case there are fields populated on page load
+                    calculate_offensive_points();
+
+                    //periodically check if recalculation is needed
+                    setInterval(function(){
+                        if (field_changed){
+                            calculate_offensive_points();
+                            field_changed = false;
+                        }
+                    }, 1000);
+                });
+
+                function calculate_offensive_points(){
+
+                    $.ajax({
+                        type: 'GET',
+                        url: "/wol/game/send_armies/calculate_offensive_points",
+                        data: {
+                            race: 'FAERY',
+                            under_spell_aggression: 'True',
+                            precalculated_modifier: 1.09261794877,
+
+                            attack_type: $("#id_attack_type").val(),
+                            general_count: $("#id_general").val(),
+                            infantry_count: $("#id_infantry").val(),
+                            offensive_specialist_count: $("#id_offensive_specialist").val(),
+                            elite_count: $("#id_elite").val(),
+                            horse_count: $("#id_horse").val(),
+                            mercenary_count: $("#id_mercenary").val(),
+                            prisoner_count:  $("#id_prisoner").val()
+                        },
+                        success: function(data) {
+                            offensive_points = parseInt(data)
+                            if (isNaN(offensive_points)){
+                                offensive_points = "Unavailable"
+                            }
+                            $("#id_total_offense_points").text(offensive_points);
+                            calculate_offensive_ratio();
+                        }
+                    });
+                }
+
+                var province_nw_attack_times = {
+                                             '249':12.96,'921':12.96,'6260':12.96,'1119':12.96,'5783':12.96,'1228':12.96,'4832':12.96,'1806':12.96,'1984':12.96,'2005':12.96,'6320':12.96,'5123':12.96,'4301':12.96,'5784':12.96,'4304':12.96,'4388':12.96,'6174':12.96,'4277':12.96,'3530':12.96,'5182':12.96,
+                                             };
+                var province_no_nw_attack_times = {
+                                            '249':12.96,'921':12.96,'6260':12.96,'1119':12.96,'5783':12.96,'1228':12.96,'4832':12.96,'1806':12.96,'1984':12.96,'2005':12.96,'6320':12.96,'5123':12.96,'4301':12.96,'5784':12.96,'4304':12.96,'4388':12.96,'6174':12.96,'4277':12.96,'3530':12.96,'5182':12.96,
+                                            };
+
+                var attack_type_reductions = {
+                                             'TRADITIONAL_MARCH':0.0,'RAZE':0.0,
+                                             };
+                var attack_time_modifications = {
+                                                'MINUS_2':[-2, 1.6],'MINUS_1':[-1, 1.5],'DEFAULT':[0, 1.0],'PLUS_1':[1, 0.8],'PLUS_2':[2, 0.7],'PLUS_3':[3, 0.6],'PLUS_4':[4, 0.5],
+                                                };
+
+                function calculate_attack_time(){
+                    // retrieve the currently selected values from fields
+                    var target_province = $('#id_target_province').val();
+
+                    if (target_province != ""){
+                        // get the attack type
+                        var attack_type_selected = $("#id_attack_type").val();
+
+                        // base attack time on target province depends on the attack type
+                        if ($.inArray(attack_type_selected, ['TRADITIONAL_MARCH', 'LEARN', 'PLUNDER', 'MASSACRE']) > -1)
+                            var prov_base_time = province_nw_attack_times[target_province];
+                        else
+                            var prov_base_time = province_no_nw_attack_times[target_province];
+
+                        // get the attack time reduction associated with the attack type
+                        var attack_reduction = attack_type_reductions[attack_type_selected];
+                        // base attack time on this target for this attack type
+                        var attack_time = prov_base_time * (1 + attack_reduction);
+
+                        // attack time modification
+                        var attack_time_selected = $("#id_modify_attack_time").val();
+                        var attack_time_mods = attack_time_modifications[attack_time_selected];
+                        var time_mod = attack_time_mods[0];
+                        var gains_nerf = attack_time_mods[1];
+
+                        // ambush attack time can only be increased, but it has no effect on gains
+                        if (attack_type_selected == 'AMBUSH'){
+                            gains_nerf = 0.0;
+                            time_mod = Math.max(0.0, time_mod);
+                        }
+
+                        // gains are reduced/increased from 100% based on the the time_mod proportion
+                        // and the increase or decrease is affected by the gains_nerf for that modification
+                        var attack_gains = 1.0 + (time_mod/attack_time * gains_nerf)
+
+                        // The attack time is adjusted based on the selected modification
+                        attack_time += time_mod;
+
+                        $('#calculated-attack-time').html(attack_time.toFixed(2));
+                        $('#calculated-attack-gains').html((attack_gains * 100).toFixed(1));
+                    }
+                    else {
+                        $('#calculated-attack-time, #calculated-attack-gains').html('?');
+                    }
+                }
+
+                $(document).ready(function(){
+                    // Listen for changes on select and input fields
+                    $("#send-armies-form select").change(calculate_attack_time);
+
+                    // call the function in case fields are populated on page load
+                    calculate_attack_time();
+                });
+
+            </script>
+
+        <form method="POST" action="" id="send-armies-form">
+            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='EqG5MHYfPIb1LLHnz3XkTLPmWLKUPXua' /></div>
+            <table class="form">
+                
+
+                <tr>
+                    <th>Target Province</th>
+                    <td><select name="target_province" id="id_target_province">
+<option value="" selected="selected">------------------ ( Size relative to you )</option>
+<option value="249">The homeless Templar --- ( 136% )</option>
+<option value="921">Tampliyery Arkadyevne --- ( 53% )</option>
+<option value="6260">ComeAtMeBro --- ( 28% )</option>
+<option value="1119">templar of speed --- ( 88% )</option>
+<option value="5783">Alpha --- ( 55% )</option>
+<option value="1228">The Kraken --- ( 46% )</option>
+<option value="4832">Istithelia --- ( 70% )</option>
+<option value="1806">Hello Darkness My Old Friend --- ( 78% )</option>
+<option value="1984">Storming Ondoy --- ( 49% )</option>
+<option value="2005">Let Ze Rabbits Wear Glasses CM --- ( 55% )</option>
+<option value="6320">Oakenwood --- ( 29% )</option>
+<option value="5123">BoogerMan --- ( 67% )</option>
+<option value="4301">Blue Mesa --- ( 159% )</option>
+<option value="5784">Illusion_Strike --- ( 55% )</option>
+<option value="4304">g00d4rt --- ( 161% )</option>
+<option value="4388">Unnecessary --- ( 46% )</option>
+<option value="6174">Grimm Tales --- ( 26% )</option>
+<option value="4277">TURTLE --- ( 162% )</option>
+<option value="3530">Hurricane Hunter --- ( 132% )</option>
+<option value="5182">Runner --- ( 35% )</option>
+</select> </td>
+                </tr>
+                <tr>
+                    <th>Select Attack Type</th>
+                    <td class="offensive-points-field"><select name="attack_type" id="id_attack_type">
+<option value="TRADITIONAL_MARCH">Traditional March </option>
+<option value="RAZE">Raze </option>
+</select> </td>
+                </tr>
+                <tr>
+                    <th>Modify Attack Time</th>
+                    <td>
+                        <select name="modify_attack_time" id="id_modify_attack_time">
+<option value="MINUS_2">-2 hours</option>
+<option value="MINUS_1">-1 hours</option>
+<option value="DEFAULT" selected="selected">0 hours</option>
+<option value="PLUS_1">+1 hours</option>
+<option value="PLUS_2">+2 hours</option>
+<option value="PLUS_3">+3 hours</option>
+<option value="PLUS_4">+4 hours</option>
+</select>   <br />
+                        Attack time <span id="calculated-attack-time">?</span> days, for <span id="calculated-attack-gains">?</span> % gains
+                    </td>
+                </tr>
+                <tr>
+                    <th>Generals to Send</th>
+                    <td class="offensive-points-field"><input id="id_general" type="text" class="two-digit-input" value="1" name="general" /> </td>
+                </tr>
+
+            </table>
+
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Available</th>
+                        <th>Send</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <th>Soldiers</th>
+                        <td>0</td>
+                        <td class="offensive-points-field"><input id="id_infantry" type="text" class="five-digit-input" name="infantry" /></td>
+                    </tr>
+                
+                    <tr>
+                        <th>Magicians</th>
+                        <td>472</td>
+                        <td class="offensive-points-field"><input id="id_offensive_specialist" type="text" class="five-digit-input" name="offensive_specialist" /></td>
+                    </tr>
+                
+                    <tr>
+                        <th>Beastmasters</th>
+                        <td>12,358</td>
+                        <td class="offensive-points-field"><input id="id_elite" type="text" class="five-digit-input" name="elite" /></td>
+                    </tr>
+                
+                    <tr>
+                        <th>War Horses</th>
+                        <td>0</td>
+                        <td class="offensive-points-field"><input id="id_horse" type="text" class="five-digit-input" name="horse" /></td>
+                    </tr>
+                
+                    <tr>
+                        <th>Mercenaries</th>
+                        <td>1,029</td>
+                        <td class="offensive-points-field"><input id="id_mercenary" type="text" class="five-digit-input" name="mercenary" /></td>
+                    </tr>
+                
+                    <tr id="calculator-separator">
+                        <th>Target province defense</th>
+                        <td></td>
+                        <td class="target-points-field">
+                            <input id="id_target_defense" type="text" class="five-digit-input" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Total offensive points (<a  href="http://wiki.utopia-game.com/index.php?title=Attacking_%26_Calculating_an_Attack#Calculating_An_Attack" target="_BLANK">Ratio to target defense</a>)</th>
+                        <td></td>
+                        <td>
+                            <span id="id_total_offense_points"></span>
+                            (<span id="id_offensive_ratio">?</span>%)
+                        </td>
+                    </tr>
+                <tbody>
+            </table>
+
+            <p>
+                <input id="id_send_armies" type="submit" value="Prepare Military"/>
+            </p>
+        </form>
+        
+    
+
+    </div>
+    
+                            </div>
+                        </div>
+                        <div id="right-column">
+                            
+                                
+                                    
+                                        <div id="skyscraper-ad">
+
+    <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-5229636934656944";
+        /* Utopia RHS Skyscraper */
+        google_ad_slot = "9149367805";
+        google_ad_width = 160;
+        google_ad_height = 600;
+        //-->
+    </script>
+    <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+</div>
+
+                                    
+                                
+                            
+                        </div>
+
+                        
+                            <div style="width: 750px;height: 90px;padding: 5px;clear: both;margin-left: 100px;">
+
+    <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-5229636934656944";
+        /* Utopia Bottom Leaderboard */
+        google_ad_slot = "7672659925";
+        google_ad_width = 728;
+        google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+    <div id="6fd6ff3339" zone_id="6fd6ff3339" class="pagefair-acceptable"></div>
+</div>
+                        
+                    </div>
+
+                    <div id="footer">
+                        <div id="version">
+                            Version: 5598
+                        </div>
+                    </div>
+
+                </div> <!--Close inner-container -->
+            </div> <!--Close outer-container -->
+        
+
+        <!-- Extra HTML -->
+        <div class="overlay" id="report-content-dialog">
+    <h1>Report Content</h1>
+    <div class="report-dialog-content">
+        <p>You are about to report that the content below is in breach of the <a href="http://wiki.utopia-game.com/index.php?title=Game_Rules#Language_.26_Attitude">Code of Conduct</a>. This is a serious allegation, which may result in disciplinary action against the player that uploaded it.</p><p><strong>WARNING: Falsely reporting content is also considered an offense, and may result in your account being suspended, or worse.</strong></p>
+        <div class="reported-content"></div>
+        <input class="button-link" type="submit" value="Report this content"></input>
+    </div>
+    <div class="spinner"></div>
+</div>
+<div style="display:none" id="report-this-label">Report this</div>
+<div style="display:none" id="report-this-url">/shared/feedback/report_content/</div>
+        <script src="http://reverbim.com/chat/loader/" type="text/javascript"></script>
+
+        
+    
+    
+        <script type="text/javascript">$(document).ready(function(){setupReverb({developer_id: '7ea6a238', channel_name: 'AGE_66_KINGDOM_1_6', titlebar_text: 'Templars at war', ticket: 'jJ33ci6CUZwk8PBqrV9m50QnkskUDLdOyAZiq+5OT87s0RRE0yuMJtOOmRJXqYyAWFwkl1jDoWydh6om83MotLE9+y/78YkpsXzrrrFhyZ6kLIOpVXZnQCMmzOTmHDiI', widget_id: 1 });});</script>
+    
+
+
+        <div id="recruitment-chat">
+            
+        </div>
+    </body>
+</html>

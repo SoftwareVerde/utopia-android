@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:paddingLeft="10dp"
+    android:background="@drawable/item_background" >
+
+    <TextView
+        android:id="@+id/news_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
+        android:text="Date"
+        android:padding="5dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:shadowColor="#ff0063d5"
+        android:phoneNumber="false"
+        android:paddingLeft="10dp"
+        android:textColor="#99AABB"
+        android:textAlignment="textEnd"
+        android:gravity="center_vertical|right"
+        android:layout_marginBottom="-3dp"
+        android:layout_marginTop="-3dp" />
+    <TextView
+        android:id="@+id/news_item_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16dp"
+        android:text="Content"
+        android:padding="5dp"
+        android:singleLine="false"
+        android:shadowColor="#ff0063d5"
+        android:phoneNumber="false"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="#ABCDEF" />
+
+</LinearLayout>

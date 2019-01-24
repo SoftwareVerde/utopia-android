@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/throne_scrollview" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="200dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <!-- Money -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/throne_money_button" >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/gold_coins_icon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:id="@id/throne_money" />
+                </LinearLayout>
+                <!-- End Money -->
+
+                <!-- Food -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/throne_food_button" >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/food_icon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:id="@id/throne_food" />
+                </LinearLayout>
+                <!-- End Food -->
+
+                <!-- Runes -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/throne_runes_button" >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/runes_icon" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:id="@id/throne_runes" />
+                </LinearLayout>
+                <!-- End Runes -->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#343434"
+                android:id="@+id/throne_resource_divider" />
+
+            <!-- Dragon Banner -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:id="@+id/throne_dragon_banner"
+                android:background="#000000"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/throne_dragon_banner_text"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+            <!-- End Dragon Banner -->
+
+            <!-- Plague Banner -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/throne_plague_banner"
+                android:background="@drawable/plague_background"
+                android:gravity="center_horizontal|center_vertical"
+                android:visibility="gone" >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/plague_red_icon"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/throne_plague_banner_text"
+                    android:textColor="#3c971b"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:text="Plagued"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+            <!-- End Plague Banner -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp" >
+
+                <!-- Acres -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="horizontal"
+                    android:background="#202020" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp"
+                        android:background="#000000" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Acres:"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:id="@id/throne_land" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Acres -->
+
+                <!-- Peasants -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:background="#202020"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/throne_peasants_button" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp" >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.00"
+                            android:background="#590707"
+                            android:id="@+id/throne_peasants_percent" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.00"
+                            android:background="#000000"
+                            android:id="@+id/throne_peasants_percent_void" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp" >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/peasants"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="2dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Peasants"
+                            android:textStyle="italic"
+                            android:textSize="14sp"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:id="@id/throne_peasants" />
+                </RelativeLayout>
+                <!-- End Peasants -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp" >
+
+                <!-- Networth -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:background="#202020"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp"
+                        android:background="#000000" >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="0.5" >
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_vertical"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="#FFFFFF"
+                                android:text="Networth:" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:layout_marginRight="10dp"
+                                android:text=""
+                                android:id="@id/throne_networth" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Networth -->
+
+                <!-- Building Efficiency -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:background="#202020"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/throne_building_efficiency_button" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp" >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.0"
+                            android:background="#072B59"
+                            android:id="@+id/throne_building_efficiency_percent_view" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="#000000"
+                            android:id="@+id/throne_building_efficiency_percent_view_void" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp" >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/building"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="2dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Building Efficiency"
+                            android:textStyle="italic"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:id="@id/throne_building_efficiency" />
+                </RelativeLayout>
+                <!-- End Building Efficiency -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp" >
+
+                <!-- Defense -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="#202020" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#000000"
+                        android:layout_margin="1dp" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Defense:"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:id="@id/throne_total_defense" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Defense -->
+
+                <!-- Offense -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="#202020" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="#000000"
+                        android:layout_margin="1dp" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Offense:"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:id="@id/throne_total_offense" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Offense -->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#343434"
+                android:id="@+id/throne_military_divider" />
+
+            <!-- Military Squares -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="#343434"
+                    android:layout_margin="2dp"
+                    android:id="@+id/throne_soldiers_button" >
+                    <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="1dp"
+                        android:background="#252525"
+                        android:id="@+id/throne_soldiers_button_background" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/soldier_unit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:text=""
+                            android:id="@id/throne_soldiers" />
+                    </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+                </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+
+                <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="#343434"
+                    android:layout_margin="2dp"
+                    android:id="@+id/throne_defensive_units_button" >
+                    <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="1dp"
+                        android:background="#252525"
+                        android:id="@+id/throne_defensive_units_button_background" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/defensive_unit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:text=""
+                            android:id="@id/throne_defensive_units" />
+                    </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+                </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+
+                <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="#343434"
+                    android:layout_margin="2dp"
+                    android:id="@+id/throne_offensive_units_button" >
+                    <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="1dp"
+                        android:background="#252525"
+                        android:id="@+id/throne_offensive_units_button_background" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/offensive_unit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:text=""
+                            android:id="@id/throne_offensive_units" />
+                    </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+                </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+
+                <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:background="#343434"
+                    android:layout_margin="2dp"
+                    android:id="@+id/throne_elites_button" >
+                    <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="1dp"
+                        android:background="#252525"
+                        android:id="@+id/throne_elites_button_background" >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/elite_unit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:text=""
+                            android:id="@id/throne_elites" />
+                    </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+                </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+            </LinearLayout>
+            <!-- End Military Squares -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp" >
+
+                <!-- Horses -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:background="#343434"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/throne_horses_border" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp" >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:background="#252525"
+                            android:id="@+id/throne_horses_percent" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:background="#151515"
+                            android:id="@+id/throne_horses_percent_void" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp" >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/horse"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="2dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:text="Horses:"
+                            android:textStyle="italic"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:id="@id/throne_horses" />
+                </RelativeLayout>
+                <!-- End Horses -->
+
+                <!-- Prisoners -->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:background="#343434"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/throne_prisoners_border" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp" >
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:background="#252525"
+                            android:id="@+id/throne_prisoners_percent" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25"
+                            android:background="#151515"
+                            android:id="@+id/throne_prisoners_percent_void" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp" >
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/prisoner_icon"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="2dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:text="Prisoners:"
+                            android:textStyle="italic"
+                            android:textSize="12sp"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dp"
+                        android:text=""
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:id="@id/throne_prisoners" />
+                </RelativeLayout>
+                <!-- End Prisoners -->
+            </LinearLayout>
+
+            <!-- Military/Civilian Percent -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:background="#202020"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:id="@+id/throne_draft_target_button" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="1dp"
+                    android:background="#000000" >
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.65"
+                        android:background="#343434"
+                        android:id="@+id/throne_military_percent_view" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.05"
+                        android:background="#252525"
+                        android:id="@+id/throne_desired_military_percent_view" />
+                    <View
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.30"
+                        android:background="#151515"
+                        android:id="@+id/throne_military_percent_view_void" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:text="Military" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#AAAAAA"
+                        android:layout_marginLeft="10dp"
+                        android:text=""
+                        android:id="@+id/throne_draft_actual" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="#AAAAAA"
+                        android:layout_marginLeft="5dp"
+                        android:text="/" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:id="@id/throne_draft_target" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:text=""
+                        android:id="@+id/throne_draft_civilian" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginLeft="10dp"
+                        android:text="Civilian" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- End Military/Civilian Percent -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp" >
+
+                <!-- Military Wage Rate -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/throne_wage_button"
+                    android:background="#202020" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp"
+                        android:background="#000000" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Wage Rate:"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:id="@id/throne_wage" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Military Wage Rate -->
+
+                <!-- Military Draft Rate -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/throne_draft_rate_button"
+                    android:background="#202020" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="1dp"
+                        android:background="#000000" >
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Draft Rate:"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginRight="10dp"
+                            android:text=""
+                            android:id="@id/throne_draft_rate" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- End Military Draft Rate -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp"
+                android:id="@id/throne_deployed_armies" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" />
+
+            <!-- Thieves -->
+            <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:background="#1c4917"
+                android:layout_margin="2dp"
+                android:id="@+id/throne_thieves_button" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="1dp"
+                    android:background="#0e250b" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.75"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/thief" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text=""
+                        android:id="@id/throne_thieves" />
+                </LinearLayout>
+            </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+            <!-- End Thieves -->
+
+            <!-- Wizards -->
+            <com.softwareverde.utopia.ui.view.SquareLinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:background="#122e6f"
+                android:layout_margin="2dp"
+                android:id="@+id/throne_wizards_button" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="1dp"
+                    android:background="#081533" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.75"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/wizard" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:text=""
+                        android:id="@id/throne_wizards" />
+                </LinearLayout>
+            </com.softwareverde.utopia.ui.view.SquareLinearLayout>
+            <!-- End Wizards -->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Begin Stealth/Mana -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" >
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/resource_green"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/throne_stealth_image" />
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/throne_stealth_button"
+                android:src="@drawable/resource_container" />
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingBottom="50dp"
+                android:id="@id/throne_stealth" />
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:text="STEALTH"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:paddingBottom="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" >
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/resource_blue"
+                android:id="@+id/throne_mana_image" />
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/throne_mana_button"
+                android:src="@drawable/resource_container" />
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingBottom="50dp"
+                android:id="@id/throne_mana" />
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:text="MANA"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:paddingBottom="0dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <!-- End Stealth/Mana -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:id="@+id/tutorial_container"
+        android:visibility="gone"
+        />
+</RelativeLayout>

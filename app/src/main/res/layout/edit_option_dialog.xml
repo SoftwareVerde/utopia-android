@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text_background" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Title Text"
+        android:id="@+id/edit_option_title"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#EEEEEE" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:id="@+id/edit_option_content"
+        android:layout_margin="10dp"
+        android:textSize="16dp"
+        android:textColor="#ABCDEF"
+        android:textIsSelectable="false"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current: "
+            android:id="@+id/edit_option_current_value_label"
+            android:textSize="14dp"
+            android:layout_marginRight="15dp"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,000"
+            android:id="@+id/edit_option_current_value"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:minWidth="65dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/edit_option_list_view"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SELECTION"
+        android:id="@+id/edit_option_selected_value"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:minLines="1"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

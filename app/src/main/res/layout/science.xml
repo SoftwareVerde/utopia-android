@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:textColor="#DDDD00"
+            android:textStyle="bold"
+            android:text="Science"
+            android:textSize="18sp"
+            android:layout_margin="2dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.80"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/science_result_text"
+            android:textSize="12sp"
+            android:lines="2"
+            android:textColor="#EEEEEE"
+            android:textStyle="italic"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="2dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#AAAA00" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/science_scrollview" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/science_container" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true">
+
+                    <!-- Alchemy -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#817900"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_alchemy_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#2e2b01"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_alchemy_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_alchemy_text"
+                                android:lines="2"
+                                android:text="Alchemy: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Tools -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#606060"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_tools_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#202020"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_tools_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_tools_text"
+                                android:lines="2"
+                                android:text="Tools: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+
+                    <!-- Housing -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#135269"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_housing_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#08242e"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_housing_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_housing_text"
+                                android:lines="2"
+                                android:text="Housing: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Food -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#136917"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_food_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#0E3109"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_food_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_food_text"
+                                android:lines="2"
+                                android:text="Food: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+                    <!-- Military -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#690B0B"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_military_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#310202"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_military_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_military_text"
+                                android:lines="2"
+                                android:text="Military: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Crime -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#BA6A00"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_crime_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#412501"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_crime_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_crime_text"
+                                android:lines="2"
+                                android:text="Crime: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+                    <!-- Channeling -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.50"
+                        android:layout_height="55dp"
+                        android:background="#202050"
+                        android:layout_margin="2dp"
+                        android:id="@+id/science_channeling_area" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="#000020"
+                            android:layout_margin="2dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="bottom"
+                            android:id="@+id/science_channeling_background_area" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:paddingLeft="4dp"
+                                android:background="#66000000"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:id="@+id/science_channeling_text"
+                                android:lines="2"
+                                android:text="Channeling: 0 - 000.00% Bonus" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ASSIGN"
+        android:id="@+id/science_submit_button"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="#202020"
+        android:layout_marginTop="-50dp"/>
+
+</LinearLayout>

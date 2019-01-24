@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt; PROVINCE"
+                android:id="@+id/aid_back_button"
+                android:minHeight="30dp"
+                android:minWidth="50dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:background="#000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textAllCaps="false"
+                android:paddingRight="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:id="@+id/aid_province_name"
+            android:background="#000000"
+            android:textColor="#FEDCBA"
+            android:textSize="20sp"
+            android:text="Loading Province..."/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="50dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your resources: " />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Money:"
+                                android:minWidth="75dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="\?"
+                                android:id="@+id/aid_current_gold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Runes:"
+                                android:minWidth="75dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="\?"
+                                android:id="@+id/aid_current_runes"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Food:"
+                                android:minWidth="75dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="\?"
+                                android:id="@+id/aid_current_food"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Soldiers"
+                                android:minWidth="75dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="\?"
+                                android:id="@+id/aid_current_soldiers"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#AA2020" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="BLOCKING AID"
+                    android:textColor="#AA2020"
+                    android:id="@+id/aid_currently_blocking"
+                    android:textSize="12sp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aid_result_text"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This will add "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/aid_trade_balance_change"
+                        android:text="0"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" gc to your trade balance."/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Food:"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/aid_send_food_amount"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|right"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="20dp"
+                        android:numeric="integer"
+                        android:enabled="true"
+                        android:editable="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gold:"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/aid_send_gold_amount"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|right"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="20dp"
+                        android:numeric="integer"
+                        android:enabled="true"
+                        android:editable="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Runes:"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/aid_send_runes_amount"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|right"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="20dp"
+                        android:numeric="integer"
+                        android:enabled="true"
+                        android:editable="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Soldiers:"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="0.5"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/aid_send_soldiers_amount"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_gravity="center_horizontal|right"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="20dp"
+                        android:numeric="integer"
+                        android:enabled="true"
+                        android:editable="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true" >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="SEND AID"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:id="@+id/aid_send_button"/>
+    </LinearLayout>
+
+</RelativeLayout>

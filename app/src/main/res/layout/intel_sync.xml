@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#202020"
+        android:id="@+id/intel_tab_layout"
+        android:gravity="center">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="UTOPIA-APP"
+            android:gravity="center"
+            android:id="@+id/intel_tab_verde"
+            android:textSize="10sp"
+            android:background="#202020"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="UPOOPU"
+            android:gravity="center"
+            android:id="@+id/intel_tab_upoopu"
+            android:textSize="10sp"
+            android:background="#202020"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="UMUNK"
+            android:gravity="center"
+            android:id="@+id/intel_tab_umunk"
+            android:textSize="10sp"
+            android:background="#202020"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.25"
+            android:text="STINGER"
+            android:gravity="center"
+            android:id="@+id/intel_tab_stinger"
+            android:textSize="10sp"
+            android:background="@android:drawable/dialog_holo_dark_frame"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/intel_sync_scrollview"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/utopia_background">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="uMunk Sync"
+                android:layout_marginBottom="10dp"
+                android:textColor="#ABCDEF"
+                android:textSize="30dp"
+                android:id="@+id/intel_sync_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/umunk_message"
+                android:textColor="#FFFFFFFF"
+                android:padding="10dp"
+                android:height="40dp"
+                android:maxLines="1"
+                android:maxHeight="40dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intel_sync_domain_label_layout"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/intel_sync_domain_input_label"
+                    android:text="Sub Domain:"
+                    android:shadowColor="#ff00cdff"
+                    android:singleLine="false"
+                    android:textColor="#ABCDEF"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*.umunk.net"
+                    android:shadowColor="#FF00CDFF"
+                    android:singleLine="false"
+                    android:textColor="#ABCDEF"
+                    android:id="@+id/intel_sync_domain_complete"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intel_sync_domain_input"
+                android:layout_gravity="center_horizontal"
+                android:editable="true"
+                android:enabled="true"
+                android:background="#5a000000"
+                android:height="50dp"
+                android:textSize="30dp"
+                android:textColor="#CCCCCC"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Username:"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:shadowColor="#ff00cdff"
+                android:singleLine="false"
+                android:textColor="#ABCDEF"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intel_sync_username_input"
+                android:layout_gravity="center_horizontal"
+                android:editable="true"
+                android:enabled="true"
+                android:background="#5a000000"
+                android:height="50dp"
+                android:textSize="30dp"
+                android:textColor="#CCCCCC"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Password"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:shadowColor="#ff00cdff"
+                android:singleLine="false"
+                android:textColor="#ABCDEF"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/intel_sync_password_input"
+                android:editable="true"
+                android:enabled="true"
+                android:background="#5a000000"
+                android:height="50dp"
+                android:textSize="30dp"
+                android:textColor="#CCCCCC"
+                android:minLines="1"
+                android:password="true"
+                android:paddingLeft="10dp"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Store"
+                    android:id="@+id/intel_sync_store_button"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#50000000"
+                    android:lines="1"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="#ABCDEF"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:layout_marginRight="2dp" />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Clear"
+                    android:id="@+id/intel_sync_clear_button"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#50000000"
+                    android:lines="1"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textColor="#ABCDEF"
+                    android:textSize="20dp"
+                    android:singleLine="true"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/intel_sync_verde_container" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Utopia-App Sync"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ABCDEF"
+            android:textSize="30dp"
+            android:id="@+id/intel_sync_verde_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <CheckBox
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:checked="true"
+                android:id="@+id/intel_sync_verde_sync_checkbox" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:text="Enable In-App Intel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.70"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:text="Intel will be shared to/from your kingdom mates that are also using the app."
+                android:gravity="center_horizontal"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

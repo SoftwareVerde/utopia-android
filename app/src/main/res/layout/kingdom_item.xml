@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.60">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:id="@+id/kingdom_item_name"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="RACE"
+                android:id="@+id/kingdom_item_race"
+                android:textSize="18sp"
+                android:textColor="#AAAAAA"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.40">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NETWORTH"
+                android:id="@+id/kingdom_item_networth"
+                android:gravity="right|center_vertical"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ACRES"
+                android:id="@+id/kingdom_item_acres"
+                android:gravity="right|center_vertical"
+                android:textColor="#AAAAAA"
+                android:textSize="18sp"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#202020"
+        android:id="@+id/kingdom_item_intel_layout"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_storms"
+            android:src="@drawable/storms_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_drought"
+            android:src="@drawable/drought_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_blizzard"
+            android:src="@drawable/blizzard_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_gluttony"
+            android:src="@drawable/gluttony_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_greed"
+            android:src="@drawable/greed_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_pitfalls"
+            android:src="@drawable/pitfalls_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_chastity"
+            android:src="@drawable/chastity_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_explosions"
+            android:src="@drawable/explosions_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_meteor_showers"
+            android:src="@drawable/meteor_showers_icon" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_riots"
+            android:src="@drawable/riots_icon" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/kingdom_item_intel_defense_home"
+            android:textColor="#FFFFFF"
+            android:gravity="center|center_vertical"
+            android:textSize="11sp"
+            android:text="150k" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kingdom_item_button_container">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="VIEW"
+            android:id="@+id/kingdom_item_view_button"
+            android:layout_weight="0.25"
+            android:background="#000000"
+            android:enabled="true"
+            android:clickable="true"
+            android:minHeight="30dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="THIEVERY"
+            android:id="@+id/kingdom_item_thievery_button"
+            android:layout_weight="0.25"
+            android:background="#000000"
+            android:enabled="true"
+            android:clickable="true"
+            android:minHeight="30dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="MAGIC"
+            android:id="@+id/kingdom_item_magic_button"
+            android:layout_weight="0.25"
+            android:background="#000000"
+            android:enabled="true"
+            android:clickable="true"
+            android:minHeight="30dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ATTACK"
+            android:id="@+id/kingdom_item_attack_button"
+            android:layout_weight="0.25"
+            android:background="#000000"
+            android:enabled="true"
+            android:clickable="true"
+            android:minHeight="30dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

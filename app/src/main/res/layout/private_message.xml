@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt; MESSAGES"
+                android:id="@+id/private_message_back_button"
+                android:minHeight="30dp"
+                android:minWidth="50dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:background="#000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textAllCaps="false"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical"
+                android:layout_gravity="right|center_vertical"
+                android:id="@+id/private_message_sender_name"
+                android:textColor="#FEDCBA"
+                android:textSize="18sp"
+                android:text="Loading Message..."
+                android:background="#000000"
+                android:maxLines="1"
+                android:minLines="1"
+                android:lines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/private_message_title"
+            android:textSize="20dp"
+            android:textColor="#FEDCBA"
+            android:gravity="center|center_vertical"
+            android:background="#202020"
+            android:padding="3dp"
+            android:text="Title" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#7e4711" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="28dp">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/private_message_content"
+                android:padding="2dp"
+                android:textColor="#FFFFFF"
+                android:background="#100800"
+                android:text="Content" />
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:orientation="vertical"
+            android:layout_marginTop="-23dp">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7e4711" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:id="@+id/private_message_date"
+                android:textSize="14dp"
+                android:textColor="#CCCCCC"
+                android:gravity="center|center_vertical"
+                android:background="#202020"
+                android:padding="2dp"
+                android:text="0000-00-00 00:00:00" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/reply_private_message_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/reply" />
+
+</RelativeLayout>

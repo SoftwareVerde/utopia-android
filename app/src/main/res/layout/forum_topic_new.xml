@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; CANCEL"
+            android:id="@+id/forum_topic_new_topic_back_button"
+            android:minHeight="30dp"
+            android:minWidth="50dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textAllCaps="false"
+            android:paddingRight="5dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/forum_topic_new_topic_title"
+            android:textColor="#FEDCBA"
+            android:textSize="18sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:hint="Forum Topic"
+            android:background="@drawable/edit_text_background"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#303030"
+        android:orientation="vertical"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="50dp"
+        android:padding="2dp">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/forum_topic_new_topic_content"
+            android:background="@drawable/edit_text_background"
+            android:gravity="left|top"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-50dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:text="SEND"
+            android:id="@+id/forum_topic_new_topic_submit_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

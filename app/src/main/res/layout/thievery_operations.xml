@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; KINGDOM"
+            android:id="@+id/thievery_operation_back_button"
+            android:minHeight="30dp"
+            android:minWidth="50dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textAllCaps="false"
+            android:paddingRight="5dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading Province..."
+            android:textColor="#FEDCBA"
+            android:textSize="20sp"
+            android:id="@+id/thievery_op_target_name"
+            android:gravity="center_vertical|center_horizontal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#202020"
+        android:id="@+id/thievery_tab_layout"
+        android:gravity="center"
+        android:visibility="visible">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:text="VIEW"
+            android:gravity="center"
+            android:id="@+id/thievery_tab_province"
+            android:textSize="10sp"
+            android:background="@android:drawable/dialog_holo_dark_frame"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.30"
+            android:text="MAGIC"
+            android:gravity="center"
+            android:id="@+id/thievery_tab_magic"
+            android:textSize="10sp"
+            android:background="@android:drawable/dialog_holo_dark_frame"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.30"
+            android:text="SURVEY"
+            android:gravity="center"
+            android:id="@+id/thievery_tab_survey"
+            android:textSize="10sp"
+            android:background="@android:drawable/dialog_holo_dark_frame"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#202020"
+        android:layout_marginBottom="3dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Thievery Operations"
+            android:layout_gravity="right"
+            android:maxLines="1"
+            android:lines="1"
+            android:minLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#c18d48"
+            android:background="#000000"
+            android:layout_marginBottom="5dp"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Stealth:"
+                    android:textColor="#926324"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\?"
+                    android:id="@+id/thievery_operation_current_stealth"
+                    android:textColor="#c18d48"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your TPA:"
+                    android:textColor="#926324"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\?"
+                    android:id="@+id/thievery_operation_current_tpa"
+                    android:textColor="#c18d48"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Thieves:"
+                    android:id="@+id/textView4"
+                    android:textColor="#926324"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/thievery_operation_send_thieves_count"
+                    android:textColor="#c18d48"
+                    android:background="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="5dp"
+                    android:width="60dp"
+                    android:gravity="center_vertical|right"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:focusable="true"
+                    android:paddingRight="3dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:editable="true"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:id="@+id/thievery_operation_send_percent"
+                    android:textColor="#c18d48"
+                    android:textSize="12sp"
+                    android:gravity="center|center_vertical"
+                    android:paddingRight="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Thieves:"
+                    android:textColor="#926324"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\?"
+                    android:id="@+id/thievery_operation_current_thieves"
+                    android:textColor="#c18d48"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Money:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_money"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Runes:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_runes"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_food"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peasants:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_peasants"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thieves:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_thieves"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Army:"
+                        android:minWidth="75dp"
+                        android:textColor="#926324"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\?"
+                        android:id="@+id/thievery_op_target_army"
+                        android:textColor="#c18d48"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#c18d48"
+            android:layout_marginTop="5dp"
+            >
+        </View>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/thievery_operation_result"
+        android:textColor="#999999"
+        android:background="#101010"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/thievery_option_list"
+        android:choiceMode="singleChoice"/>
+
+</LinearLayout>

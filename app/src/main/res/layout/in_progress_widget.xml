@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_00"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_01"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_02"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_03"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_04"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_05"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_06"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_07"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_08"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_09"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_10"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_11"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_12"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_13"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_14"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_15"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_16"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_17"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_18"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_19"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_20"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_21"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_22"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="0.04"
+        android:background="#303030"
+        android:layout_margin="1dp" >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="#000000"
+            android:id="@+id/in_progress_tick_23"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

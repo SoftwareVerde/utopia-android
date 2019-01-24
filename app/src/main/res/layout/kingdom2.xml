@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="My Kingdom:"
+            android:id="@+id/kingdom_province_kingdom"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:background="#000000"/>
+
+        <include layout="@layout/kingdom_navigation" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:text="KINGDOM NAME"
+            android:id="@+id/kingdom_name"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:textColor="#DDDDDD"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#90000000"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:singleLine="true"
+            android:shadowColor="#000000"
+            android:layout_margin="0dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.50"
+                android:text="STANCE"
+                android:id="@+id/kingdom_stance"
+                android:maxLines="1"
+                android:minLines="1"
+                android:lines="1"
+                android:textColor="#DDDDDD"
+                android:textStyle="bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#90000000"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:singleLine="true"
+                android:shadowColor="#000000"
+                android:layout_margin="0dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.50"
+                android:text="000,000,000 NW"
+                android:id="@+id/kingdom_networth"
+                android:maxLines="1"
+                android:minLines="1"
+                android:lines="1"
+                android:textColor="#DDDDDD"
+                android:textStyle="bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#90000000"
+                android:textSize="20sp"
+                android:textIsSelectable="false"
+                android:singleLine="true"
+                android:shadowColor="#000000"
+                android:layout_margin="0dp"/>
+        </LinearLayout>
+
+        <include layout="@layout/hostility_meter" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:text="At War"
+            android:id="@+id/kingdom_war_banner"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#FF0000"
+            android:textSize="20sp"
+            android:textIsSelectable="false"
+            android:singleLine="true"
+            android:shadowColor="#000000"
+            android:layout_margin="0dp" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:stretchMode="columnWidth"
+            android:focusableInTouchMode="true"
+            android:id="@+id/kingdom_listview" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/kingdom_focused_item_overlay"
+        android:background="#B0000000"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/kingdom_focused_buttons"
+        android:descendantFocusability="blocksDescendants" >
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_button"
+            android:id="@+id/kingdom_focused_button_aid" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/aid" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_button"
+            android:id="@+id/kingdom_focused_button_view" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/eye" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_button_green"
+            android:id="@+id/kingdom_focused_button_thievery" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/thief" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_button_blue"
+            android:id="@+id/kingdom_focused_button_magic" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/wizard" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/round_button_red"
+            android:id="@+id/kingdom_focused_button_attack" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/crossed_swords" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

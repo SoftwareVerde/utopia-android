@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="25dp"
+    android:id="@+id/kingdom_hostility_meter_container"
+    android:background="#000000">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#252525" >
+        <View
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:background="#01DF01"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/kingdom_hostility_meter_value" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="NORMAL"
+            android:textColor="#FFFFFF"
+            android:id="@+id/kingdom_hostility_meter_relation" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="1dp"
+        android:background="#252525" >
+        <View
+            android:layout_width="120dp"
+            android:layout_height="3dp"
+            android:background="#01DF01"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/kingdom_enemy_hostility_meter_value" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="NORMAL"
+            android:textColor="#FFFFFF"
+            android:id="@+id/kingdom_enemy_hostility_meter_relation" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="10sp"
+            android:gravity="right|center_vertical"
+            android:text="(Enemy)"
+            android:textColor="#FFFFFF"
+            android:paddingRight="3dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

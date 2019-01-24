@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#202020"
+            android:id="@+id/news_tab_layout"
+            android:gravity="center">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:text="PROVINCE"
+                android:gravity="center"
+                android:id="@+id/news_tab_province"
+                android:textSize="10sp"
+                android:background="#202020"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.50"
+                android:text="KINGDOM"
+                android:gravity="center"
+                android:id="@+id/news_tab_kingdom"
+                android:textSize="10sp"
+                android:background="@android:drawable/dialog_holo_dark_frame"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="#AA000000"
+            android:layout_margin="0dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="←"
+                android:textSize="20dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:minLines="1"
+                android:maxLines="1"
+                android:lines="1"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/news_previous"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:text="Jan"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:background="#00FFFFFF"
+                    android:maxLength="3"
+                    android:textAlignment="center"
+                    android:id="@+id/news_month" />
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="fill_parent"
+                    android:text="00"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:background="#00FFFFFF"
+                    android:maxLength="2"
+                    android:textAlignment="center"
+                    android:id="@+id/news_year" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="→"
+                android:textSize="20dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:minLines="1"
+                android:maxLines="1"
+                android:lines="1"
+                android:layout_alignParentRight="true"
+                android:id="@+id/news_next"/>
+
+        </RelativeLayout>
+
+        <com.softwareverde.utopia.ui.view.MaxHeightScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:maxHeight="150dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_background"
+                android:padding="2dp"
+                android:id="@+id/news_royal_commands_wrapper">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Royal Commands"
+                    android:id="@+id/news_royal_commands_title"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#FF6050"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/news_royal_commands"
+                    android:text=""
+                    android:textColor="#FEDCBA"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+        </com.softwareverde.utopia.ui.view.MaxHeightScrollView>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/news_list"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="none"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <include layout="@layout/news_summary" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="-30dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#202020"
+            android:id="@+id/news_tab_format_layout"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:text="SUMMARIZED"
+                android:gravity="center"
+                android:id="@+id/news_tab_format_summary"
+                android:textColor="#ABCDEF"
+                android:textSize="10sp"
+                android:background="@android:drawable/dialog_holo_dark_frame" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.50"
+                android:text="RAW"
+                android:gravity="center"
+                android:id="@+id/news_tab_format_raw"
+                android:textColor="#FEDCBA"
+                android:textSize="10sp"
+                android:background="#202020" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

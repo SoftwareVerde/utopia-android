@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatroom_message_input"
+            android:layout_gravity="center_horizontal"
+            android:lines="3"
+            android:maxLines="3"
+            android:minLines="3"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:background="@drawable/utopia_background"
+            android:gravity="left|top"
+            android:inputType="text|textMultiLine|textCapSentences|textAutoComplete|textAutoCorrect"
+            android:layout_marginRight="50dp"
+            android:minHeight="50dp" />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="SEND"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center"
+            android:layout_margin="0dp"
+            android:textSize="8sp"
+            android:id="@+id/chatroom_message_send_button" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/chatroom_message_kingdom_mate_tag_wrapper">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="#000000" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/chatroom_message_kingdom_mate_tag_list">
+            </LinearLayout>
+        </ScrollView>
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="#000000" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatroom_message_listview"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

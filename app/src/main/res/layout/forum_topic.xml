@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:text="&lt; TOPICS"
+                android:id="@+id/forum_topic_back_button"
+                android:minHeight="30dp"
+                android:minWidth="50dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:background="#000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textAllCaps="false"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/forum_topic_next_button"
+                android:textColor="#FEDCBA"
+                android:textSize="18sp"
+                android:text="NEXT &gt;"
+                android:background="#000000"
+                android:maxLines="1"
+                android:minLines="1"
+                android:lines="1"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/forum_topic_posts_listview">
+
+        </ListView>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/forum_topic_reply_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/reply" />
+
+</RelativeLayout>
