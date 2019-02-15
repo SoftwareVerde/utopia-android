@@ -1,7 +1,6 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.json.Json;
 import com.softwareverde.utopia.bundle.ActiveSpellsBundle;
 import com.softwareverde.utopia.bundle.ArmyOffenseBundle;
 import com.softwareverde.utopia.bundle.AttackBundle;
@@ -2201,7 +2200,7 @@ public class Session {
                     sourceProvince.setMinConquestNetworth(Util.parseInt(warRoomBundle.get(WarRoomBundle.Keys.MIN_CONQUEST_NW)));
                     sourceProvince.setMaxConquestNetworth(Util.parseInt(warRoomBundle.get(WarRoomBundle.Keys.MAX_CONQUEST_NW)));
 
-                    final Json attackTimeJson = Json.fromString(warRoomBundle.get(WarRoomBundle.Keys.ATTACK_TIME_PARAMS));
+                    final Json attackTimeJson = Json.parse(warRoomBundle.get(WarRoomBundle.Keys.ATTACK_TIME_PARAMS));
                     _attackTimeParameters.put(attack.getTargetProvince().getKingdomIdentifier(), attackTimeJson);
 
                     _utopiaUtil.calculateOffense(attack, calculateOffenseCallback);
@@ -2230,7 +2229,7 @@ public class Session {
 
                         WarRoomBundle warRoomBundle = (WarRoomBundle) response.getBundle();
 
-                        final Json attackTimeJson = Json.fromString(warRoomBundle.get(WarRoomBundle.Keys.ATTACK_TIME_PARAMS));
+                        final Json attackTimeJson = Json.parse(warRoomBundle.get(WarRoomBundle.Keys.ATTACK_TIME_PARAMS));
                         _attackTimeParameters.put(_focusedKingdomIdentifier, attackTimeJson);
 
                         if (callback != null) {

@@ -1,6 +1,7 @@
 package com.softwareverde.utopia.news;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Province;
 
 public class NewsAttackEvent extends NewsEvent {
@@ -37,10 +38,10 @@ public class NewsAttackEvent extends NewsEvent {
     private void _parseUnitsLost(final String news) {
         final Province.Race race = _province.getRace();
 
-        final Integer soldiersLost = _firstItemOrNull(Util.pregMatch(".*We lost.* ([0-9,]+) soldier.*", news));
-        final Integer offensiveUnitsLost = _firstItemOrNull(Util.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getOffensiveUnitKeyword(race) +".*", news));
-        final Integer defensiveUnitsLost = _firstItemOrNull(Util.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getDefensiveUnitKeyword(race) +".*", news));
-        final Integer elitesLost = _firstItemOrNull(Util.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getEliteKeyword(race) +".*", news));
+        final Integer soldiersLost = _firstItemOrNull(StringUtil.pregMatch(".*We lost.* ([0-9,]+) soldier.*", news));
+        final Integer offensiveUnitsLost = _firstItemOrNull(StringUtil.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getOffensiveUnitKeyword(race) +".*", news));
+        final Integer defensiveUnitsLost = _firstItemOrNull(StringUtil.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getDefensiveUnitKeyword(race) +".*", news));
+        final Integer elitesLost = _firstItemOrNull(StringUtil.pregMatch(".*We lost.* ([0-9,]+) "+ Province.getEliteKeyword(race) +".*", news));
 
         if (soldiersLost != null) {
             _soldiers = Util.coalesce(_soldiers) - soldiersLost;
@@ -66,7 +67,7 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Traditional March:
         if (_news.contains("came through and ravaged our lands! They captured")) {
-            final Integer acresLost = _firstItemOrNull(Util.pregMatch("They captured ([0-9,]+) acres", _news));
+            final Integer acresLost = _firstItemOrNull(StringUtil.pregMatch("They captured ([0-9,]+) acres", _news));
             if (acresLost != null) {
                 _acres = Util.coalesce(_acres) - acresLost;
             }
@@ -79,7 +80,7 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Conquest:
         if (_news.contains("came through and ravaged our lands! They were able to capture")) {
-            final Integer acresLost= _firstItemOrNull(Util.pregMatch("They were able to capture ([0-9,]+) acres before we could turn them away", _news));
+            final Integer acresLost= _firstItemOrNull(StringUtil.pregMatch("They were able to capture ([0-9,]+) acres before we could turn them away", _news));
             if (acresLost != null) {
                 _acres = Util.coalesce(_acres) - acresLost;
             }
@@ -92,9 +93,9 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Plunder:
         if (_news.contains("came through and ravaged our lands! They looted")) {
-            _gold = _firstItemOrNull(Util.pregMatch("They looted.* ([0-9,]+) gold coin", _news));
-            _food = _firstItemOrNull(Util.pregMatch("They looted.* ([0-9,]+) bushel", _news));
-            _runes = _firstItemOrNull(Util.pregMatch("They looted.* ([0-9,]+) rune", _news));
+            _gold = _firstItemOrNull(StringUtil.pregMatch("They looted.* ([0-9,]+) gold coin", _news));
+            _food = _firstItemOrNull(StringUtil.pregMatch("They looted.* ([0-9,]+) bushel", _news));
+            _runes = _firstItemOrNull(StringUtil.pregMatch("They looted.* ([0-9,]+) rune", _news));
 
             _parseUnitsLost(_news);
 
@@ -104,7 +105,7 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Ambush:
         if (_news.contains("ambushed one of our armies")) {
-            final Integer acresLost = _firstItemOrNull(Util.pregMatch("They recaptured ([0-9,]+) acres", _news));
+            final Integer acresLost = _firstItemOrNull(StringUtil.pregMatch("They recaptured ([0-9,]+) acres", _news));
             if (acresLost != null) {
                 _acres = Util.coalesce(_acres) - acresLost;
             }
@@ -117,7 +118,7 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Raze:
         if (_news.contains("Their armies destroyed")) {
-            final Integer acresLost = _firstItemOrNull(Util.pregMatch("Their armies destroyed ([0-9,]+) acre. of our land!", _news));
+            final Integer acresLost = _firstItemOrNull(StringUtil.pregMatch("Their armies destroyed ([0-9,]+) acre. of our land!", _news));
             if (acresLost != null) {
                 _acres = Util.coalesce(_acres) - acresLost;
             }
@@ -128,7 +129,7 @@ public class NewsAttackEvent extends NewsEvent {
             return;
         }
         if (_news.contains("Their armies razed")) {
-            final Integer buildingsLost = _firstItemOrNull(Util.pregMatch("Their armies razed ([0-9,]+) acre. of buildings!", _news));
+            final Integer buildingsLost = _firstItemOrNull(StringUtil.pregMatch("Their armies razed ([0-9,]+) acre. of buildings!", _news));
             if (buildingsLost != null) {
                 _buildings = Util.coalesce(_buildings) - buildingsLost;
             }
@@ -141,7 +142,7 @@ public class NewsAttackEvent extends NewsEvent {
 
         // Learn:
         if (_news.contains("books of knowledge in the Arts & Sciences!")) {
-            final Integer scienceLost = _firstItemOrNull(Util.pregMatch("They stole ([0-9,]+) book. of knowledge in the Arts & Sciences!", _news));
+            final Integer scienceLost = _firstItemOrNull(StringUtil.pregMatch("They stole ([0-9,]+) book. of knowledge in the Arts & Sciences!", _news));
             if (scienceLost != null) {
                 _science = Util.coalesce(_science) - scienceLost;
             }
@@ -163,7 +164,7 @@ public class NewsAttackEvent extends NewsEvent {
         // Massacre:
         // Forces from HitGuyUnderMe (1:7) came through and ravaged our lands! Their armies killed 1158 of our peasants, thieves, and wizards! We lost 49 soldiers, 423 Druids and 347 Beastmasters in this battle.
         if (_news.contains("Their armies killed ")) {
-            final Integer peasantsThievesWizardsKilled = _firstItemOrNull(Util.pregMatch("Their armies killed ([0-9,]+) of our peasants, thieves, and wizards!", _news));
+            final Integer peasantsThievesWizardsKilled = _firstItemOrNull(StringUtil.pregMatch("Their armies killed ([0-9,]+) of our peasants, thieves, and wizards!", _news));
             if (peasantsThievesWizardsKilled != null) {
                 _peasants = Util.coalesce(_peasants) - peasantsThievesWizardsKilled;
             }

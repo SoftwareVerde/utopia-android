@@ -1,6 +1,6 @@
 package com.softwareverde.utopia.intelsync;
 
-import com.softwareverde.util.Json;
+import com.softwareverde.json.Json;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.util.Base64Util;
 import com.softwareverde.utopia.util.JavaScriptExecutor;

@@ -1,6 +1,5 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.bundle.PrivateMessageBundle;
 
 import java.text.SimpleDateFormat;

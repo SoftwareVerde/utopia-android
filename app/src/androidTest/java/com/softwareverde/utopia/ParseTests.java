@@ -3,7 +3,6 @@ package com.softwareverde.utopia;
 import android.content.Context;
 import android.test.ActivityTestCase;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.bundle.AttackBundle;
 import com.softwareverde.utopia.bundle.BuildingsBundle;
 import com.softwareverde.utopia.bundle.Bundle;

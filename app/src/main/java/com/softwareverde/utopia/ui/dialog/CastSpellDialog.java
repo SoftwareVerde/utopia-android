@@ -10,7 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.R;
 
 public class CastSpellDialog extends DialogFragment {
@@ -47,14 +48,14 @@ public class CastSpellDialog extends DialogFragment {
             ((TextView) view.findViewById(R.id.cast_spell_content)).setText(_content);
         }
         if (_currentRuneCount != null) {
-            ((TextView) view.findViewById(R.id.cast_spell_current_runes)).setText(Util.formatNumberString(_currentRuneCount));
+            ((TextView) view.findViewById(R.id.cast_spell_current_runes)).setText(StringUtil.formatNumberString(_currentRuneCount));
         }
         if (_runeCost != null) {
-            ((TextView) view.findViewById(R.id.cast_spell_rune_cost)).setText(Util.formatNumberString(_runeCost));
+            ((TextView) view.findViewById(R.id.cast_spell_rune_cost)).setText(StringUtil.formatNumberString(_runeCost));
         }
 
         if (_currentRuneCount != null && _runeCost != null) {
-            ((TextView) view.findViewById(R.id.cast_spell_runes_remaining)).setText(Util.formatNumberString(_currentRuneCount - _runeCost));
+            ((TextView) view.findViewById(R.id.cast_spell_runes_remaining)).setText(StringUtil.formatNumberString(_currentRuneCount - _runeCost));
         }
 
         builder.setPositiveButton(_positiveButtonText, new DialogInterface.OnClickListener() {

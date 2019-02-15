@@ -15,7 +15,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.R;
 
 public class BuildBuildingDialog extends DialogFragment {
@@ -74,7 +75,7 @@ public class BuildBuildingDialog extends DialogFragment {
                 cost = (int) (cost * 2.0F);
             }
             costLabel.setVisibility(View.VISIBLE);
-            costLabel.setText("(" + Util.formatNumberString(cost) + " gc)");
+            costLabel.setText("(" + StringUtil.formatNumberString(cost) + " gc)");
         }
     }
 
@@ -89,10 +90,10 @@ public class BuildBuildingDialog extends DialogFragment {
         Integer timeMinutes = 60 - ((int) ((now - Util.truncateMinutes(now)) / 1000F / 60F));
 
         if (_isConstructionExpedited()) {
-            buildTimeLabel.setText("(Ready in " + Util.formatNumberString((_buildTime - 1) / 2) + "h "+ Util.formatNumberString(timeMinutes) +"m");
+            buildTimeLabel.setText("(Ready in " + StringUtil.formatNumberString((_buildTime - 1) / 2) + "h "+ StringUtil.formatNumberString(timeMinutes) +"m");
         }
         else {
-            buildTimeLabel.setText("(Ready in "+ Util.formatNumberString((_buildTime - 1)) +"h "+ Util.formatNumberString(timeMinutes) +"m)");
+            buildTimeLabel.setText("(Ready in "+ StringUtil.formatNumberString((_buildTime - 1)) +"h "+ StringUtil.formatNumberString(timeMinutes) +"m)");
         }
     }
 
@@ -122,10 +123,10 @@ public class BuildBuildingDialog extends DialogFragment {
         }
 
         if (_totalLand != null && _buildingCount != null) {
-            ((TextView) view.findViewById(R.id.set_building_total_building_amount)).setText(Util.formatNumberString(_buildingCount));
+            ((TextView) view.findViewById(R.id.set_building_total_building_amount)).setText(StringUtil.formatNumberString(_buildingCount));
             ((TextView) view.findViewById(R.id.set_building_total_building_percent)).setText(Util.formatPercentString(_buildingCount / (float) _totalLand * 100.0f));
 
-            amountInput.setText(Util.formatNumberString(_buildingCount));
+            amountInput.setText(StringUtil.formatNumberString(_buildingCount));
             percentInput.setText(Util.formatPercentString(_buildingCount / (float) _totalLand * 100.0f));
         }
 
@@ -138,7 +139,7 @@ public class BuildBuildingDialog extends DialogFragment {
                 Integer deltaValue = amount - _buildingCount;
 
                 actionLabel.setText(deltaValue < 0 ? "Raze" : "Build");
-                actionAmountLabel.setText(Util.formatNumberString(Math.abs(deltaValue)));
+                actionAmountLabel.setText(StringUtil.formatNumberString(Math.abs(deltaValue)));
 
                 percentInput.setText(Util.formatPercentString(amount / (float) _totalLand * 100.0f));
 
@@ -156,9 +157,9 @@ public class BuildBuildingDialog extends DialogFragment {
                 Integer deltaValue = amount - _buildingCount;
 
                 actionLabel.setText(deltaValue < 0 ? "Raze" : "Build");
-                actionAmountLabel.setText(Util.formatNumberString(Math.abs(deltaValue)));
+                actionAmountLabel.setText(StringUtil.formatNumberString(Math.abs(deltaValue)));
 
-                amountInput.setText(Util.formatNumberString(amount));
+                amountInput.setText(StringUtil.formatNumberString(amount));
 
                 _updateCost();
                 _updateBuildTime();

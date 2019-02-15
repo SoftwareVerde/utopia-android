@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Forum;
 import com.softwareverde.utopia.R;
 
@@ -46,7 +47,7 @@ public class ForumTopicAdapter extends BaseAdapter {
         titleTextView.setText(forumTopic.title);
 
         final TextView postCountTextView = (TextView) view.findViewById(R.id.forum_topic_item_post_count);
-        postCountTextView.setText(Util.formatNumberString(forumTopic.postCount));
+        postCountTextView.setText(StringUtil.formatNumberString(forumTopic.postCount));
 
         final TextView creatorTextView = (TextView) view.findViewById(R.id.forum_topic_item_creator);
         creatorTextView.setText(forumTopic.creator);

@@ -16,7 +16,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.R;
 import com.softwareverde.utopia.ui.widget.InProgressWidget;
 
@@ -97,7 +98,7 @@ public class EditValueDialog extends DialogFragment {
         }
 
         if (_currentValue != null && _inProgressValue != null) {
-            ((TextView) _view.findViewById(R.id.edit_value_total_value)).setText(Util.formatNumberString((Integer) (Util.parseInt(_inProgressValue) + Util.parseInt(_currentValue))));
+            ((TextView) _view.findViewById(R.id.edit_value_total_value)).setText(StringUtil.formatNumberString((Integer) (Util.parseInt(_inProgressValue) + Util.parseInt(_currentValue))));
         }
         else {
             ((ViewGroup) (_view.findViewById(R.id.edit_value_total_value).getParent())).removeAllViews();
@@ -191,7 +192,7 @@ public class EditValueDialog extends DialogFragment {
 
             if (_cost != null) {
                 costView.setVisibility(View.VISIBLE);
-                costView.setText("("+ Util.formatNumberString(totalCost) +" gc)");
+                costView.setText("("+ StringUtil.formatNumberString(totalCost) +" gc)");
             }
         }
         else {
@@ -205,7 +206,7 @@ public class EditValueDialog extends DialogFragment {
 
             if (_cost != null) {
                 costView.setVisibility(View.VISIBLE);
-                costView.setText("("+ Util.formatNumberString(totalCost) +" gc)");
+                costView.setText("("+ StringUtil.formatNumberString(totalCost) +" gc)");
             }
         }
 
@@ -235,7 +236,7 @@ public class EditValueDialog extends DialogFragment {
         }
 
         if (_valueTypeString != null) {
-            actionAmountView.setText(Util.formatNumberString(Math.abs(value)));
+            actionAmountView.setText(StringUtil.formatNumberString(Math.abs(value)));
             actionAmountView.setVisibility(View.VISIBLE);
         }
         else {

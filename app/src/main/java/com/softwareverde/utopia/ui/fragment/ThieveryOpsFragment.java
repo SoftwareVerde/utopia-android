@@ -16,15 +16,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Building;
-import com.softwareverde.utopia.DraftRate;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
 import com.softwareverde.utopia.Session;
 import com.softwareverde.utopia.ThieveryOperation;
-import com.softwareverde.utopia.TrainArmyData;
 import com.softwareverde.utopia.bundle.ThieveryOperationBundle;
 import com.softwareverde.utopia.ui.adapter.ThieveryOperationAdapter;
 import com.softwareverde.utopia.ui.dialog.EditOptionDialog;
@@ -91,7 +90,7 @@ public class ThieveryOpsFragment extends Fragment {
 
         currentStealth.setText(province.getStealth() + "%");
         currentTpa.setText(Util.formatPercentString((float) province.getThieves() / (float) province.getAcres()));
-        currentThieveCount.setText(Util.formatNumberString(province.getThieves()));
+        currentThieveCount.setText(StringUtil.formatNumberString(province.getThieves()));
 
         float sendPercent = Util.parseInt(sendThievesInput.getText().toString()) / ((float) province.getThieves());
         sendThievesPercent.setText(Util.formatPercentString(Float.valueOf(sendPercent * 100.0f)) + "%");
@@ -103,7 +102,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_money)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_money)).setText(Util.formatNumberString(targetMoney));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_money)).setText(StringUtil.formatNumberString(targetMoney));
         }
 
         Integer targetRunes = _targetProvince.getRunes();
@@ -111,7 +110,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_runes)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_runes)).setText(Util.formatNumberString(targetRunes));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_runes)).setText(StringUtil.formatNumberString(targetRunes));
         }
 
         Integer targetFood = _targetProvince.getFood();
@@ -119,7 +118,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_food)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_food)).setText(Util.formatNumberString(targetFood));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_food)).setText(StringUtil.formatNumberString(targetFood));
         }
 
         Integer targetPeasants = _targetProvince.getPeasants();
@@ -127,7 +126,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_peasants)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_peasants)).setText(Util.formatNumberString(targetPeasants));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_peasants)).setText(StringUtil.formatNumberString(targetPeasants));
         }
 
         Integer targetThieves = _targetProvince.getThieves();
@@ -135,7 +134,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_thieves)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_thieves)).setText(Util.formatNumberString(targetThieves));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_thieves)).setText(StringUtil.formatNumberString(targetThieves));
         }
 
         Integer targetMilitaryPopulation = _targetProvince.getMilitaryPopulation();
@@ -143,7 +142,7 @@ public class ThieveryOpsFragment extends Fragment {
             ((TextView) _view.findViewById(R.id.thievery_op_target_army)).setText("?");
         }
         else {
-            ((TextView) _view.findViewById(R.id.thievery_op_target_army)).setText(Util.formatNumberString(targetMilitaryPopulation));
+            ((TextView) _view.findViewById(R.id.thievery_op_target_army)).setText(StringUtil.formatNumberString(targetMilitaryPopulation));
         }
 
         _adapter.notifyDataSetChanged();

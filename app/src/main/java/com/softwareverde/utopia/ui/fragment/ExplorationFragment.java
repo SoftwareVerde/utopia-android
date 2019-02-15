@@ -11,7 +11,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
@@ -104,8 +105,8 @@ public class ExplorationFragment extends Fragment {
                 Integer totalGoldCost = acres * province.getExplorationGoldCost();
                 Integer totalSoldierCost = acres * province.getExplorationSoldiersCost();
 
-                ((TextView) _view.findViewById(R.id.explore_total_gold_cost)).setText(Util.formatNumberString(totalGoldCost));
-                ((TextView) _view.findViewById(R.id.explore_total_soldier_cost)).setText(Util.formatNumberString(totalSoldierCost));
+                ((TextView) _view.findViewById(R.id.explore_total_gold_cost)).setText(StringUtil.formatNumberString(totalGoldCost));
+                ((TextView) _view.findViewById(R.id.explore_total_soldier_cost)).setText(StringUtil.formatNumberString(totalSoldierCost));
             }
         });
 
@@ -162,13 +163,13 @@ public class ExplorationFragment extends Fragment {
 
         Province province = _session.getProvince();
 
-        ((TextView) _view.findViewById(R.id.explore_current_acres)).setText(Util.formatNumberString(province.getAcres()));
-        ((TextView) _view.findViewById(R.id.explore_acres_in_progress)).setText("+"+ Util.formatNumberString(province.getExplorationAcresInProgress()));
-        ((TextView) _view.findViewById(R.id.explore_current_money)).setText(Util.formatNumberString(province.getMoney()));
-        ((TextView) _view.findViewById(R.id.explore_current_soldiers)).setText(Util.formatNumberString(province.getSoldiers()));
+        ((TextView) _view.findViewById(R.id.explore_current_acres)).setText(StringUtil.formatNumberString(province.getAcres()));
+        ((TextView) _view.findViewById(R.id.explore_acres_in_progress)).setText("+"+ StringUtil.formatNumberString(province.getExplorationAcresInProgress()));
+        ((TextView) _view.findViewById(R.id.explore_current_money)).setText(StringUtil.formatNumberString(province.getMoney()));
+        ((TextView) _view.findViewById(R.id.explore_current_soldiers)).setText(StringUtil.formatNumberString(province.getSoldiers()));
 
-        ((TextView) _view.findViewById(R.id.explore_gold_cost)).setText(Util.formatNumberString(province.getExplorationGoldCost()));
-        ((TextView) _view.findViewById(R.id.explore_soldier_cost)).setText(Util.formatNumberString(province.getExplorationSoldiersCost()));
+        ((TextView) _view.findViewById(R.id.explore_gold_cost)).setText(StringUtil.formatNumberString(province.getExplorationGoldCost()));
+        ((TextView) _view.findViewById(R.id.explore_soldier_cost)).setText(StringUtil.formatNumberString(province.getExplorationSoldiersCost()));
     }
 
     @Override

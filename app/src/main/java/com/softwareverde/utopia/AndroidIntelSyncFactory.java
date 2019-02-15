@@ -2,7 +2,7 @@ package com.softwareverde.utopia;
 
 import android.content.Context;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.IoUtil;
 import com.softwareverde.utopia.bundle.BundleFactory;
 import com.softwareverde.utopia.intelsync.IntelSync;
 import com.softwareverde.utopia.intelsync.IntelSyncFactory;
@@ -31,7 +31,7 @@ public class AndroidIntelSyncFactory implements IntelSyncFactory {
 
             case UPOOPU: {
                 final UpoopuUtil.Dependencies upoopuDependencies = new UpoopuUtil.Dependencies();
-                upoopuDependencies.setUpoopuLibrary(Util.streamToString(_applicationContext.getResources().openRawResource(R.raw.upoopu_lib)));
+                upoopuDependencies.setUpoopuLibrary(IoUtil.streamToString(_applicationContext.getResources().openRawResource(R.raw.upoopu_lib)));
                 upoopuDependencies.setJavaScriptExecutor(new AndroidJavaScriptExecutor(_applicationContext));
                 upoopuDependencies.setBase64Util(new AndroidBase64Util());
 

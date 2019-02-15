@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Building;
 import com.softwareverde.utopia.Province;
@@ -125,7 +126,7 @@ public class BuildingsCouncilFragment extends Fragment {
 
         final Building building = _province.getBuilding(buildingType);
         if (building == null) { return; }
-        ((TextView) _view.findViewById(buildingCountViewId)).setText(Util.formatNumberString(building.getCount()));
+        ((TextView) _view.findViewById(buildingCountViewId)).setText(StringUtil.formatNumberString(building.getCount()));
         ((TextView) _view.findViewById(buildingPercentViewId)).setText(String.format("%.1f%%", (building.getPercent() * 100.0f)));
 
         if (buildingProgressCountViewId != null && buildingProgressPercentViewId != null) {
@@ -140,18 +141,18 @@ public class BuildingsCouncilFragment extends Fragment {
         if (_province == null) { return; }
 
         Integer totalLand = _province.getAcres();
-        ((TextView) _view.findViewById(R.id.building_total_land)).setText(Util.formatNumberString(totalLand));
+        ((TextView) _view.findViewById(R.id.building_total_land)).setText(StringUtil.formatNumberString(totalLand));
 
         Float buildingEfficiency = _province.getBuildingEfficiency();
         if (buildingEfficiency != null) {
             ((TextView) _view.findViewById(R.id.building_building_efficiency)).setText(String.format("%.1f%%", buildingEfficiency * 100.0f));
         }
 
-        ((TextView) _view.findViewById(R.id.building_current_money)).setText(Util.formatNumberString(_province.getMoney()));
-        ((TextView) _view.findViewById(R.id.building_building_credits)).setText(Util.formatNumberString(_province.getBuildCredits()));
+        ((TextView) _view.findViewById(R.id.building_current_money)).setText(StringUtil.formatNumberString(_province.getMoney()));
+        ((TextView) _view.findViewById(R.id.building_building_credits)).setText(StringUtil.formatNumberString(_province.getBuildCredits()));
 
-        ((TextView) _view.findViewById(R.id.building_build_cost)).setText(Util.formatNumberString(_province.getBuildCost()));
-        ((TextView) _view.findViewById(R.id.building_raze_cost)).setText(Util.formatNumberString(_province.getRazeCost()));
+        ((TextView) _view.findViewById(R.id.building_build_cost)).setText(StringUtil.formatNumberString(_province.getBuildCost()));
+        ((TextView) _view.findViewById(R.id.building_raze_cost)).setText(StringUtil.formatNumberString(_province.getRazeCost()));
 
         _drawBuilding(Building.Type.BARREN, R.id.building_barren_count, R.id.building_barren_percent, null, null);
         _drawBuilding(Building.Type.HOMES, R.id.building_homes_count, R.id.building_homes_percent, R.id.building_homes_progress_count, R.id.building_homes_progress_percent);

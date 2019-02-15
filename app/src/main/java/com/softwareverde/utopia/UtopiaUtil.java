@@ -1,7 +1,6 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.json.Json;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.bundle.ActiveSpellsBundle;
 import com.softwareverde.utopia.bundle.ArmyOffenseBundle;
@@ -47,8 +46,8 @@ import java.util.List;
 import java.util.Map;
 
 public class UtopiaUtil {
-    private static final Json _monthIndexTranslations = Json.fromString("{JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5, JUL: 6}");
-    private static final Json _monthTickTranslations = Json.fromString("{JAN: 0, FEB: 24, MAR: 48, APR: 72, MAY: 96, JUN: 120, JUL: 144}");
+    private static final Json _monthIndexTranslations = Json.parse("{JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5, JUL: 6}");
+    private static final Json _monthTickTranslations = Json.parse("{JAN: 0, FEB: 24, MAR: 48, APR: 72, MAY: 96, JUN: 120, JUL: 144}");
 
     private static class ExecuteWebRequestSettings {
         Boolean executeAsynchronously = true;

@@ -1,6 +1,5 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.bundle.ActiveSpellBundle;
 import com.softwareverde.utopia.bundle.ProvinceIntelActiveSpellBundle;
 import com.softwareverde.utopia.bundle.SpellResultBundle;

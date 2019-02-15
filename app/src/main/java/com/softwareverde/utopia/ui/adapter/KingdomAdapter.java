@@ -10,7 +10,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.ActiveSpell;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
@@ -112,8 +113,8 @@ public class KingdomAdapter extends BaseAdapter {
         button.setOnClickListener(_createButtonListener(view, ButtonActionType.Attack, position));
 
         ((TextView) view.findViewById(R.id.kingdom_item_name)).setText(province.getName());
-        ((TextView) view.findViewById(R.id.kingdom_item_acres)).setText(Util.formatNumberString(province.getAcres()));
-        ((TextView) view.findViewById(R.id.kingdom_item_networth)).setText(Util.formatNumberString(province.getNetworth()));
+        ((TextView) view.findViewById(R.id.kingdom_item_acres)).setText(StringUtil.formatNumberString(province.getAcres()));
+        ((TextView) view.findViewById(R.id.kingdom_item_networth)).setText(StringUtil.formatNumberString(province.getNetworth()));
         ((TextView) view.findViewById(R.id.kingdom_item_race)).setText(Province.getStringForRace(province.getRace()));
 
         final List<ActiveSpell> activeSpells = province.getActiveSpells();

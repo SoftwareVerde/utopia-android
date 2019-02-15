@@ -1,5 +1,5 @@
 package com.softwareverde.utopia;
-import com.softwareverde.util.Json;
+import com.softwareverde.json.Json;
 
 import java.net.URLEncoder;
 
@@ -21,7 +21,7 @@ public class ChatCredentials {
         return jsonString;
     }
     public static ChatCredentials fromJson(String jsonString) {
-        Json json = Json.fromString(jsonString);
+        Json json = Json.parse(jsonString);
 
         ChatCredentials chatCredentials = new ChatCredentials();
         chatCredentials._developerId = json.get("developer_id", Json.Types.STRING);

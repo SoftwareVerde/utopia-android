@@ -1,7 +1,8 @@
 package com.softwareverde.utopia.parser;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.json.Json;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Building;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.Spell;
@@ -250,7 +251,7 @@ public class UtopiaParser {
     }
     public BadAccessType parseBadAccessType(String html) {
         if (html.contains("Access is Denied")) {
-            final List<String> emailVerificationMatch = Util.pregMatch("Your email address \"([^\"]+)\" has not yet been verified.", html);
+            final List<String> emailVerificationMatch = StringUtil.pregMatch("Your email address \"([^\"]+)\" has not yet been verified.", html);
             if (emailVerificationMatch.size() > 0) {
                 return BadAccessType.UNVERIFIED_EMAIL;
             }
@@ -259,7 +260,7 @@ public class UtopiaParser {
             return BadAccessType.NO_PROVINCE;
         }
         else {
-            final List<String> deadProvinceMatch = Util.pregMatch("your once-mighty province of ([^ ]+) \\(([0-9]+):([0-9]+)\\) has collapsed, and lies in ruins.", html);
+            final List<String> deadProvinceMatch = StringUtil.pregMatch("your once-mighty province of ([^ ]+) \\(([0-9]+):([0-9]+)\\) has collapsed, and lies in ruins.", html);
             if (deadProvinceMatch.size() > 0) {
                 return BadAccessType.DEAD_PROVINCE;
             }
@@ -1311,10 +1312,10 @@ public class UtopiaParser {
         Json messages;
         if ((begin = html.indexOf(messagesTokenStart)) >= 0 && (end = html.indexOf(messagesTokenEnd, begin)) >= 0) {
             final String data = Util.unescapeString(html.substring(begin + messagesTokenStart.length(), end));
-            messages = Json.fromString(data);
+            messages = Json.parse(data);
         }
         else {
-            messages = Json.fromString(html).get(0);
+            messages = Json.parse(html).get(0);
         }
 
         ChatroomBundle chatroomBundle = new ChatroomBundle();
@@ -2228,10 +2229,10 @@ public class UtopiaParser {
     }
 
     private Json _parseAttackTimeParameters(final String html) {
-        final Json networthAttackTimes = Json.fromString("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var province_nw_attack_times = {", "};")) +"}");
-        final Json noNetworthAttackTimes = Json.fromString("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var province_no_nw_attack_times = {", "};")) +"}");
-        final Json attackTypeReductions = Json.fromString("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var attack_type_reductions = {", "};")) +"}");
-        final Json attackTimeModifications = Json.fromString("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var attack_time_modifications = {", "};")) +"}");
+        final Json networthAttackTimes = Json.parse("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var province_nw_attack_times = {", "};")) +"}");
+        final Json noNetworthAttackTimes = Json.parse("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var province_no_nw_attack_times = {", "};")) +"}");
+        final Json attackTypeReductions = Json.parse("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var attack_type_reductions = {", "};")) +"}");
+        final Json attackTimeModifications = Json.parse("{"+ _trimComma(Util.parseValueBetweenTokens(html, "var attack_time_modifications = {", "};")) +"}");
 
         final Json attackTimeParametersJson = new Json();
         attackTimeParametersJson.put("networthAttackTimes", networthAttackTimes);

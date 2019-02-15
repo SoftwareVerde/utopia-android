@@ -1,7 +1,5 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
-
 public class ProvinceCredentials {
     private String _username;
     private String _password;

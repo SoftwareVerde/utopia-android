@@ -12,7 +12,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.NewsParser;
 import com.softwareverde.utopia.Province;
@@ -105,15 +106,15 @@ public class NewsFragment extends Fragment {
         ((TextView) _view.findViewById(R.id.news_year)).setText(year);
 
         if (_parser != null) {
-            ((TextView) _view.findViewById(R.id.news_summary_net_acres)).setText(Util.formatNumberString(_parser.getNetAcres()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_peasants)).setText(Util.formatNumberString(_parser.getNetPeasants()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_soldiers)).setText(Util.formatNumberString(_parser.getNetSoldiers()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_offensive_units)).setText(Util.formatNumberString(_parser.getNetOffensiveUnits()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_defensive_units)).setText(Util.formatNumberString(_parser.getNetDefensiveUnits()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_elites)).setText(Util.formatNumberString(_parser.getNetElites()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_gold)).setText(Util.formatNumberString(_parser.getNetGold()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_food)).setText(Util.formatNumberString(_parser.getNetFood()));
-            ((TextView) _view.findViewById(R.id.news_summary_net_runes)).setText(Util.formatNumberString(_parser.getNetRunes()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_acres)).setText(StringUtil.formatNumberString(_parser.getNetAcres()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_peasants)).setText(StringUtil.formatNumberString(_parser.getNetPeasants()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_soldiers)).setText(StringUtil.formatNumberString(_parser.getNetSoldiers()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_offensive_units)).setText(StringUtil.formatNumberString(_parser.getNetOffensiveUnits()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_defensive_units)).setText(StringUtil.formatNumberString(_parser.getNetDefensiveUnits()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_elites)).setText(StringUtil.formatNumberString(_parser.getNetElites()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_gold)).setText(StringUtil.formatNumberString(_parser.getNetGold()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_food)).setText(StringUtil.formatNumberString(_parser.getNetFood()));
+            ((TextView) _view.findViewById(R.id.news_summary_net_runes)).setText(StringUtil.formatNumberString(_parser.getNetRunes()));
             // TODO: Net Thieves
             // TODO: Net Horses
 

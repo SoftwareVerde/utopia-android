@@ -23,7 +23,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.HostilityMeter;
 import com.softwareverde.utopia.Kingdom;
@@ -290,7 +291,7 @@ public class Kingdom2Fragment extends Fragment {
 
             stance = kingdom.getStance();
             kingdomName = kingdom.getName();
-            networth = Util.formatNumberString(kingdom.getNetworth()) + " NW";
+            networth = StringUtil.formatNumberString(kingdom.getNetworth()) + " NW";
 
             { // Draw Hostility Meter
                 if (kingdom.hasHostilityMeter()) {

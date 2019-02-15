@@ -11,7 +11,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Building;
 import com.softwareverde.utopia.Province;
@@ -52,8 +53,8 @@ public class SpellListFragment extends Fragment {
         _adapter.notifyDataSetChanged();
 
         Province province = _session.getProvince();
-        ((TextView) _view.findViewById(R.id.spells_list_rune_count)).setText(Util.formatNumberString(province.getRunes()));
-        ((TextView) _view.findViewById(R.id.spells_list_mana)).setText(Util.formatNumberString(province.getMana()) + "%");
+        ((TextView) _view.findViewById(R.id.spells_list_rune_count)).setText(StringUtil.formatNumberString(province.getRunes()));
+        ((TextView) _view.findViewById(R.id.spells_list_mana)).setText(StringUtil.formatNumberString(province.getMana()) + "%");
         ((TextView) _view.findViewById(R.id.spells_list_wpa)).setText(Util.formatPercentString((float) Util.coalesce(province.getWizards()) / Util.coalesce(province.getAcres(), 1)));
         TextView percentGuildsView = ((TextView) _view.findViewById(R.id.spells_list_guild_percent));
         Building guilds = province.getBuilding(Building.Type.GUILDS);

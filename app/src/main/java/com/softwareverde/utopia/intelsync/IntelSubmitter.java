@@ -1,6 +1,6 @@
 package com.softwareverde.utopia.intelsync;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.Kingdom;
 import com.softwareverde.utopia.Province;

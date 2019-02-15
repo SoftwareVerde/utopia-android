@@ -14,7 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.softwareverde.util.GifView;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.DraftRate;
 import com.softwareverde.utopia.Dragon;
@@ -89,7 +90,7 @@ public class ThroneFragment extends Fragment {
     protected String _formatNumberStringForDisplay(Integer number) {
         if (number == null) { return "??"; }
 
-        return Util.formatNumberString(number);
+        return StringUtil.formatNumberString(number);
     }
 
     protected void _drawData() {

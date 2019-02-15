@@ -17,7 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
@@ -128,7 +129,7 @@ public class AttackFragment extends Fragment {
 
         if (_attack.isOffenseCalculated()) {
             Integer offenseCalculated = _attack.getCalculatedOffense();
-            provinceOffenseText = Util.formatNumberString(offenseCalculated);
+            provinceOffenseText = StringUtil.formatNumberString(offenseCalculated);
             Integer defenseAtHome = _getTargetDefense();
             if (defenseAtHome != null && defenseAtHome > 0) {
                 Float offenseRatio = ((float) offenseCalculated) / ((float) defenseAtHome);
@@ -167,7 +168,7 @@ public class AttackFragment extends Fragment {
         String defenseAtHomeString = "??";
         if (_targetProvince != null) {
             Integer defenseAtHome = _getTargetDefense();
-            defenseAtHomeString = Util.formatNumberString(defenseAtHome);
+            defenseAtHomeString = StringUtil.formatNumberString(defenseAtHome);
         }
         TextView defenseTextView = ((TextView) _view.findViewById(R.id.attack_province_defense));
         defenseTextView.setText(defenseAtHomeString);
@@ -185,11 +186,11 @@ public class AttackFragment extends Fragment {
         ((TextView) _view.findViewById(R.id.attack_attack_type)).setText(_attack.getType() == null ? "" : UtopiaUtil.Attack.getDisplayNameForAttackType(_attack.getType()));
         ((TextView) _view.findViewById(R.id.attack_attack_time)).setText(_attack.getTime() == null ? "" : UtopiaUtil.Attack.getDisplayNameForAttackTime(_attack.getTime()));
 
-        ((TextView) _view.findViewById(R.id.attack_soldiers_count)).setText(Util.formatNumberString(_provice.getSoldiersHome()));
-        ((TextView) _view.findViewById(R.id.attack_attackers_count)).setText(Util.formatNumberString(_provice.getOffensiveUnitsHome()));
-        ((TextView) _view.findViewById(R.id.attack_horses_count)).setText(Util.formatNumberString(_provice.getHorsesHome()));
-        ((TextView) _view.findViewById(R.id.attack_elites_count)).setText(Util.formatNumberString(_provice.getElitesHome()));
-        ((TextView) _view.findViewById(R.id.attack_prisoners_count)).setText(Util.formatNumberString(_provice.getPrisoners()));
+        ((TextView) _view.findViewById(R.id.attack_soldiers_count)).setText(StringUtil.formatNumberString(_provice.getSoldiersHome()));
+        ((TextView) _view.findViewById(R.id.attack_attackers_count)).setText(StringUtil.formatNumberString(_provice.getOffensiveUnitsHome()));
+        ((TextView) _view.findViewById(R.id.attack_horses_count)).setText(StringUtil.formatNumberString(_provice.getHorsesHome()));
+        ((TextView) _view.findViewById(R.id.attack_elites_count)).setText(StringUtil.formatNumberString(_provice.getElitesHome()));
+        ((TextView) _view.findViewById(R.id.attack_prisoners_count)).setText(StringUtil.formatNumberString(_provice.getPrisoners()));
 
         Integer maxPrisoners = 0;
         if (_army != null && _provice.getPrisoners() != null &&  _provice.getMercenaryRate() != null) {
@@ -202,7 +203,7 @@ public class AttackFragment extends Fragment {
                 maxPrisoners = 0;
             }
         }
-        ((TextView) _view.findViewById(R.id.attack_max_prisoners)).setText(Util.formatNumberString(maxPrisoners) +" Maximum");
+        ((TextView) _view.findViewById(R.id.attack_max_prisoners)).setText(StringUtil.formatNumberString(maxPrisoners) +" Maximum");
 
         Integer maxMercenaries = 0;
         if (_army != null && _provice.getMercenaryCost() != null && _provice.getMercenaryRate() != null) {
@@ -215,7 +216,7 @@ public class AttackFragment extends Fragment {
                 maxMercenaries = 0;
             }
         }
-        ((TextView) _view.findViewById(R.id.attack_max_mercenaries)).setText(Util.formatNumberString(maxMercenaries) +" Maximum");
+        ((TextView) _view.findViewById(R.id.attack_max_mercenaries)).setText(StringUtil.formatNumberString(maxMercenaries) +" Maximum");
 
         // Padding-Right Hack: (Bug in Android)
         Integer[] padRightIds = new Integer[] {
@@ -496,7 +497,7 @@ public class AttackFragment extends Fragment {
                 editDefenseDialog.setInProgressValue(null);
                 editDefenseDialog.setPositiveButtonText("Set Defense");
 
-                editDefenseDialog.setCurrentValue(Util.formatNumberString(_getTargetDefense()));
+                editDefenseDialog.setCurrentValue(StringUtil.formatNumberString(_getTargetDefense()));
 
                 editDefenseDialog.setCallback(new EditValueDialog.Callback() {
                     @Override

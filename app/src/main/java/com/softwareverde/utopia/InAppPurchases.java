@@ -7,7 +7,7 @@ import com.android.vending.util.IabHelper;
 import com.android.vending.util.IabResult;
 import com.android.vending.util.Inventory;
 import com.android.vending.util.Purchase;
-import com.softwareverde.util.Json;
+import com.softwareverde.json.Json;
 import com.softwareverde.utopia.ui.dialog.EditOptionDialog;
 
 import java.util.ArrayList;

@@ -10,7 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
 
@@ -28,7 +29,7 @@ public class DeployedArmyDialog extends DialogFragment {
             return "??";
         }
 
-        return Util.formatNumberString(number);
+        return StringUtil.formatNumberString(number);
     }
 
     public void setActivity(Activity activity) {

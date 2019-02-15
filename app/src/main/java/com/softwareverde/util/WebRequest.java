@@ -1,5 +1,7 @@
 package com.softwareverde.util;
 
+import com.softwareverde.json.Json;
+
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -208,7 +210,7 @@ public class WebRequest {
     public synchronized Json getJsonResult() {
         if (! _resultReady) return null;
 
-        return Json.fromString(_rawResult);
+        return Json.parse(_rawResult);
     }
     public synchronized String getRawResult() { return _rawResult; }
     private synchronized void _setResult(String result) {

@@ -1,7 +1,6 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.json.Json;
 import com.softwareverde.utopia.bundle.Bundle;
 import com.softwareverde.utopia.bundle.BundleFactory;
 import com.softwareverde.utopia.parser.JsoupHtmlParser;

@@ -1,6 +1,5 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.bundle.ScientistBundle;
 
 public class Scientist {

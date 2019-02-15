@@ -1,8 +1,8 @@
 package com.softwareverde.utopia.news;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.Kingdom;
 import com.softwareverde.utopia.Province;
+import com.softwareverde.utopia.Util;
 
 import java.util.List;
 

@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
 import com.softwareverde.utopia.Session;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 public class SpellListAdapter extends BaseAdapter {
     Activity _activity;
@@ -72,7 +74,7 @@ public class SpellListAdapter extends BaseAdapter {
         ((TextView) view.findViewById(R.id.spell_item_name)).setText(spell.getName());
 
         final Integer runeCost = spell.getRuneCost();
-        final String runeCostString = (runeCost == null ? "" : Util.formatNumberString(runeCost));
+        final String runeCostString = (runeCost == null ? "" : StringUtil.formatNumberString(runeCost));
         ((TextView) view.findViewById(R.id.spell_item_rune_cost)).setText(runeCostString);
 
         TextView spellItemDurationText = (TextView) view.findViewById(R.id.spell_item_duration);

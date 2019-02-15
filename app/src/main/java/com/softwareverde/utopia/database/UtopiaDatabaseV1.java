@@ -1,6 +1,6 @@
 package com.softwareverde.utopia.database;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Building;
 import com.softwareverde.utopia.Dragon;
 import com.softwareverde.utopia.Kingdom;

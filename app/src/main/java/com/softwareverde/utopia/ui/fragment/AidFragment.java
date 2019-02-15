@@ -14,7 +14,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
@@ -55,10 +56,10 @@ public class AidFragment extends Fragment {
         ((TextView) _view.findViewById(R.id.aid_province_name)).setText(_targetProvince.getName());
 
         Province province = _session.getProvince();
-        ((TextView) _view.findViewById(R.id.aid_current_food)).setText(Util.formatNumberString(province.getFood()));
-        ((TextView) _view.findViewById(R.id.aid_current_gold)).setText(Util.formatNumberString(province.getMoney()));
-        ((TextView) _view.findViewById(R.id.aid_current_runes)).setText(Util.formatNumberString(province.getRunes()));
-        ((TextView) _view.findViewById(R.id.aid_current_soldiers)).setText(Util.formatNumberString(province.getSoldiers()));
+        ((TextView) _view.findViewById(R.id.aid_current_food)).setText(StringUtil.formatNumberString(province.getFood()));
+        ((TextView) _view.findViewById(R.id.aid_current_gold)).setText(StringUtil.formatNumberString(province.getMoney()));
+        ((TextView) _view.findViewById(R.id.aid_current_runes)).setText(StringUtil.formatNumberString(province.getRunes()));
+        ((TextView) _view.findViewById(R.id.aid_current_soldiers)).setText(StringUtil.formatNumberString(province.getSoldiers()));
 
         /*
             Boolean allowsIncomingAid = province.allowsIncomingAid();
@@ -101,7 +102,7 @@ public class AidFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                ((TextView) _view.findViewById(R.id.aid_trade_balance_change)).setText(Util.formatNumberString(_calculateAidShipmentValue()));
+                ((TextView) _view.findViewById(R.id.aid_trade_balance_change)).setText(StringUtil.formatNumberString(_calculateAidShipmentValue()));
             }
         };
         ((EditText) _view.findViewById(R.id.aid_send_food_amount)).addTextChangedListener(textWatcher);

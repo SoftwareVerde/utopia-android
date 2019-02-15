@@ -16,6 +16,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.softwareverde.json.Json;
+import com.softwareverde.json.Jsonable;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,7 +108,7 @@ public class WebAppView extends WebView { // implements GestureDetector.OnGestur
                         Jsonable result;
 
                         if (jsonParam != null && jsonParam.length() > 0) {
-                            result = method.run(Json.fromString(jsonParam));
+                            result = method.run(Json.parse(jsonParam));
                         }
                         else {
                             result = method.run(new Json());

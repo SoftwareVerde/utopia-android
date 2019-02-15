@@ -1,6 +1,6 @@
 package com.softwareverde.utopia.bundle;
 
-import com.softwareverde.util.Json;
+import com.softwareverde.json.Json;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -71,7 +71,7 @@ public class BundleFactory {
         }
     }
 
-    public Bundle createBundle(final String bundleJsonAsString) { return _createBundle(Json.fromString(bundleJsonAsString)); }
+    public Bundle createBundle(final String bundleJsonAsString) { return _createBundle(Json.parse(bundleJsonAsString)); }
     public Bundle createBundle(final Json bundleJson) { return _createBundle(bundleJson); }
     private Bundle _createBundle(final Json bundleJson) {
         final String bundleType = bundleJson.get("TYPE", Json.Types.STRING);

@@ -1,99 +1,96 @@
-package com.softwareverde.util;
+package com.softwareverde.utopia;
 
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class Util {
+public class Util extends com.softwareverde.util.Util {
+//
+//    public static Integer parseInt(String numberString) {
+//        try {
+//            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).intValue();
+//        }
+//        catch (Exception e) {
+//            System.out.println("com.softwareverde.utopia.util :: ParseInt :: Invalid integer value: "+ numberString);
+//            return 0;
+//        }
+//    }
+//    public static Long parseLong(String numberString) {
+//        try {
+//            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).longValue();
+//        }
+//        catch (Exception e) {
+//            System.out.println("com.softwareverde.utopia.util :: ParseLong :: Invalid long value: "+ numberString);
+//            return 0L;
+//        }
+//    }
+//    public static Float parseFloat(String numberString) {
+//        try {
+//            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).floatValue();
+//        }
+//        catch (Exception e) {
+//            System.out.println("com.softwareverde.utopia.util :: ParseFloat :: Invalid float value: "+ numberString);
+//            return 0.0f;
+//        }
+//    }
+//    public static String formatNumberString(Integer number) {
+//        if (number == null) return "";
+//
+//        return NumberFormat.getInstance().format(number);
+//    }
 
-    public static Integer parseInt(String numberString) {
-        try {
-            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).intValue();
-        }
-        catch (Exception e) {
-            System.out.println("com.softwareverde.utopia.util :: ParseInt :: Invalid integer value: "+ numberString);
-            return 0;
-        }
-    }
-    public static Long parseLong(String numberString) {
-        try {
-            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).longValue();
-        }
-        catch (Exception e) {
-            System.out.println("com.softwareverde.utopia.util :: ParseLong :: Invalid long value: "+ numberString);
-            return 0L;
-        }
-    }
-    public static Float parseFloat(String numberString) {
-        try {
-            return NumberFormat.getNumberInstance(java.util.Locale.US).parse(numberString.trim()).floatValue();
-        }
-        catch (Exception e) {
-            System.out.println("com.softwareverde.utopia.util :: ParseFloat :: Invalid float value: "+ numberString);
-            return 0.0f;
-        }
-    }
-    public static String formatNumberString(Integer number) {
-        if (number == null) return "";
-
-        return NumberFormat.getInstance().format(number);
-    }
     public static String formatPercentString(Float percent) {
         if (percent == null) return "";
 
         return String.format("%.2f", percent);
     }
+
     // Truncates the minutes from an epoch timestamp.
     // Expects milliseconds (i.e. NOT currentTimeMillis / 1000L)
     public static long truncateMinutes(Long currentSeconds) {
         return (long) (((long) (currentSeconds / 60.0d / 60.0d / 1000.0d)) * 60.0d * 60.0d * 1000.0d);
     }
-
-    public static int computeLevenshteinDistance (String s0, String s1) {
-        int len0 = s0.length() + 1;
-        int len1 = s1.length() + 1;
-
-        // the array of distances
-        int[] cost = new int[len0];
-        int[] newcost = new int[len0];
-
-        // initial cost of skipping prefix in String s0
-        for (int i = 0; i < len0; i++) cost[i] = i;
-
-        // dynamically computing the array of distances
-
-        // transformation cost for each letter in s1
-        for (int j = 1; j < len1; j++) {
-            // initial cost of skipping prefix in String s1
-            newcost[0] = j;
-
-            // transformation cost for each letter in s0
-            for(int i = 1; i < len0; i++) {
-                // matching current letters in both strings
-                int match = (s0.charAt(i - 1) == s1.charAt(j - 1)) ? 0 : 1;
-
-                // computing cost for each transformation
-                int cost_replace = cost[i - 1] + match;
-                int cost_insert  = cost[i] + 1;
-                int cost_delete  = newcost[i - 1] + 1;
-
-                // keep minimum cost
-                newcost[i] = Math.min(Math.min(cost_insert, cost_delete), cost_replace);
-            }
-
-            // swap cost/newcost arrays
-            int[] swap = cost; cost = newcost; newcost = swap;
-        }
-
-        // the distance is the cost for transforming all letters in both strings
-        return cost[len0 - 1];
-    }
-
+//
+//    public static int computeLevenshteinDistance (String s0, String s1) {
+//        int len0 = s0.length() + 1;
+//        int len1 = s1.length() + 1;
+//
+//        // the array of distances
+//        int[] cost = new int[len0];
+//        int[] newcost = new int[len0];
+//
+//        // initial cost of skipping prefix in String s0
+//        for (int i = 0; i < len0; i++) cost[i] = i;
+//
+//        // dynamically computing the array of distances
+//
+//        // transformation cost for each letter in s1
+//        for (int j = 1; j < len1; j++) {
+//            // initial cost of skipping prefix in String s1
+//            newcost[0] = j;
+//
+//            // transformation cost for each letter in s0
+//            for(int i = 1; i < len0; i++) {
+//                // matching current letters in both strings
+//                int match = (s0.charAt(i - 1) == s1.charAt(j - 1)) ? 0 : 1;
+//
+//                // computing cost for each transformation
+//                int cost_replace = cost[i - 1] + match;
+//                int cost_insert  = cost[i] + 1;
+//                int cost_delete  = newcost[i - 1] + 1;
+//
+//                // keep minimum cost
+//                newcost[i] = Math.min(Math.min(cost_insert, cost_delete), cost_replace);
+//            }
+//
+//            // swap cost/newcost arrays
+//            int[] swap = cost; cost = newcost; newcost = swap;
+//        }
+//
+//        // the distance is the cost for transforming all letters in both strings
+//        return cost[len0 - 1];
+//    }
+//
     public static Integer[] initializeIntegerArray(int size) {
         Integer[] array = new Integer[size];
         for (int i=0; i<size; i++) {
@@ -101,21 +98,21 @@ public class Util {
         }
         return array;
     }
-
-    public static String coalesce(String string) {
-        return Util.coalesce(string, "");
-    }
-    public static Integer coalesce(Integer number) {
-        return Util.coalesce(number, 0);
-    }
-    public static <T> T coalesce(T value, T defaultValue) {
-        return (value != null ? value : defaultValue);
-    }
-
-    public interface AndroidIdCallback {
-        void run(String androidId);
-    }
-
+//
+//    public static String coalesce(String string) {
+//        return Util.coalesce(string, "");
+//    }
+//    public static Integer coalesce(Integer number) {
+//        return Util.coalesce(number, 0);
+//    }
+//    public static <T> T coalesce(T value, T defaultValue) {
+//        return (value != null ? value : defaultValue);
+//    }
+//
+//    public interface AndroidIdCallback {
+//        void run(String androidId);
+//    }
+//
     public static String parseValueBetweenTokens(String string, String startToken, String endToken) {
         final Integer end;
         final Integer begin;
@@ -140,7 +137,12 @@ public class Util {
         return null;
     }
 
-    // NOTE: Does not returns time with milliseconds..
+
+    /**
+     * Returns a timestamp interpretation (without milliseconds) of the datetime string.
+     *  Expected format: yyyy-MM-dd HH:mm:ss
+     *  Returns 0 if an error was encountered.
+     */
     public static Long datetimeToTimestamp(final String datetime) {
         try {
             final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
@@ -151,21 +153,22 @@ public class Util {
             return 0L;
         }
     }
-
-    public static List<String> pregMatch(final String regex, final String haystack) {
-        List<String> matches = new ArrayList<String>();
-        final Pattern pattern = Pattern.compile(regex);
-        final Matcher matcher = pattern.matcher(haystack);
-        if (matcher.find()) {
-            for (Integer i=0; i<matcher.groupCount(); ++i) {
-                matches.add(matcher.group(i+1));
-            }
-        }
-        else {
-            // System.out.println("No Match: "+ regex +" :: "+ haystack);
-        }
-        return matches;
-    }
+//
+//    public static List<String> pregMatch(final String regex, final String haystack) {
+//        List<String> matches = new ArrayList<String>();
+//        final Pattern pattern = Pattern.compile(regex);
+//        final Matcher matcher = pattern.matcher(haystack);
+//        if (matcher.find()) {
+//            for (Integer i=0; i<matcher.groupCount(); ++i) {
+//                matches.add(matcher.group(i+1));
+//            }
+//        }
+//        else {
+//            // System.out.println("No Match: "+ regex +" :: "+ haystack);
+//        }
+//        return matches;
+//    }
+//
 
     public static String unescapeString(final String input) {
         final StringBuilder stringBuilder = new StringBuilder(input.length());
@@ -235,8 +238,9 @@ public class Util {
         return input.replaceAll("\\n[ \\t\\n]*\\n[ \\t]*", "\n\n"); // Limit the number of consecutive newlines to 2.
     }
 
-    public static String streamToString(java.io.InputStream is) {
-        java.util.Scanner s = new java.util.Scanner(is, "UTF-8").useDelimiter("\\A");
-        return s.hasNext() ? s.next() : "";
-    }
+//
+//    public static String streamToString(java.io.InputStream is) {
+//        java.util.Scanner s = new java.util.Scanner(is, "UTF-8").useDelimiter("\\A");
+//        return s.hasNext() ? s.next() : "";
+//    }
 }

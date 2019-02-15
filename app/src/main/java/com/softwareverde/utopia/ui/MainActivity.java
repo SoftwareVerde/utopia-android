@@ -10,7 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,9 +24,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.softwareverde.json.Json;
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.AndroidUtil;
 import com.softwareverde.utopia.InAppPurchases;
@@ -62,7 +62,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
     private static final String LOGIN_CALLBACK_IDENTIFIER = "MainActivityLoginCallback";
     public static final String DATE_CALLBACK_IDENTIFIER = "MainActivityDateCallback";
 

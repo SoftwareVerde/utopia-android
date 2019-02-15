@@ -1,6 +1,5 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.bundle.Bundle;
 import com.softwareverde.utopia.bundle.ChatMessageBundle;
 import com.softwareverde.utopia.bundle.ChatroomBundle;

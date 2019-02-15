@@ -3,7 +3,6 @@ package com.softwareverde.utopia;
 import android.app.Activity;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.database.AndroidKeyValueStore;
 import com.softwareverde.utopia.news.NewsAttackEvent;

@@ -14,7 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.DraftRate;
 import com.softwareverde.utopia.InAppPurchases;
 import com.softwareverde.utopia.Kingdom;
@@ -67,14 +68,14 @@ public class InteractiveThroneFragment extends ThroneFragment {
         String currentValueString = null;
         Integer currentValue = fieldBindingValueGetter.getCurrentValue();
         if (currentValue != null) {
-            currentValueString = Util.formatNumberString(currentValue);
+            currentValueString = StringUtil.formatNumberString(currentValue);
         }
         editValueDialog.setCurrentValue(currentValueString);
 
         String inProgressValueString = null;
         Integer inProgressValue = fieldBindingValueGetter.getInProgressValue();
         if (inProgressValue != null) {
-            inProgressValueString = Util.formatNumberString(inProgressValue);
+            inProgressValueString = StringUtil.formatNumberString(inProgressValue);
         }
         editValueDialog.setInProgressValue(inProgressValueString);
 
@@ -634,14 +635,14 @@ public class InteractiveThroneFragment extends ThroneFragment {
                     final View draftTargetView = inflater.inflate(R.layout.view_population_dialog, null);
                     builder.setView(draftTargetView);
 
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_soldiers_value)).setText(Util.formatNumberString(soldiers));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_defense_army_value)).setText(Util.formatNumberString(defMilitaryPopulation));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_offense_army_value)).setText(Util.formatNumberString(offMilitaryPopulation));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_elite_army_value)).setText(Util.formatNumberString(eliteMilitaryPopulation));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_thieves_value)).setText(Util.formatNumberString(thievesPopulation));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_wizards_value)).setText(Util.formatNumberString(wizardsPopulation));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_peasants_value)).setText(Util.formatNumberString(peasants));
-                    ((TextView) draftTargetView.findViewById(R.id.view_population_dead_value)).setText(Util.formatNumberString(dead));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_soldiers_value)).setText(StringUtil.formatNumberString(soldiers));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_defense_army_value)).setText(StringUtil.formatNumberString(defMilitaryPopulation));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_offense_army_value)).setText(StringUtil.formatNumberString(offMilitaryPopulation));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_elite_army_value)).setText(StringUtil.formatNumberString(eliteMilitaryPopulation));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_thieves_value)).setText(StringUtil.formatNumberString(thievesPopulation));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_wizards_value)).setText(StringUtil.formatNumberString(wizardsPopulation));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_peasants_value)).setText(StringUtil.formatNumberString(peasants));
+                    ((TextView) draftTargetView.findViewById(R.id.view_population_dead_value)).setText(StringUtil.formatNumberString(dead));
 
                     ((TextView) draftTargetView.findViewById(R.id.view_population_soldiers_percent)).setText(Util.formatPercentString(soldiersPercent) + "%");
                     ((TextView) draftTargetView.findViewById(R.id.view_population_defense_army_percent)).setText(Util.formatPercentString(defMilitaryPercent) + "%");

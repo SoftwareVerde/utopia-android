@@ -1,7 +1,7 @@
 package com.softwareverde.utopia.bundle;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Jsonable;
+import com.softwareverde.json.Json;
+import com.softwareverde.json.Jsonable;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 package com.softwareverde.utopia;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -84,7 +84,7 @@ public class Building {
         Building.Type matchedType = null;
 
         for (Building.Type type : Building._buildingNameMap.keySet()) {
-            Integer distance = Util.computeLevenshteinDistance(Building._buildingNameMap.get(type).toLowerCase(), name.toLowerCase());
+            Integer distance = StringUtil.computeLevenshteinDistance(Building._buildingNameMap.get(type).toLowerCase(), name.toLowerCase());
             if (distance < smallestDistance) {
                 smallestDistance = distance;
                 matchedType = type;

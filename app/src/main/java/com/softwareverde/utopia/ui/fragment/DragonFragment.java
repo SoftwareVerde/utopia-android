@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Dragon;
 import com.softwareverde.utopia.Kingdom;
 import com.softwareverde.utopia.Province;
@@ -76,7 +77,7 @@ public class DragonFragment extends Fragment {
                                         _activity.runOnUiThread(new Runnable() {
                                             @Override
                                             public void run() {
-                                                fundDragonResultTextView.setText("You have donated " + Util.formatNumberString(fundedAmount) + " gold coins to the quest of launching a dragon.");
+                                                fundDragonResultTextView.setText("You have donated " + StringUtil.formatNumberString(fundedAmount) + " gold coins to the quest of launching a dragon.");
                                                 fundDragonAmount.setText("");
                                                 _drawData();
                                             }
@@ -245,7 +246,7 @@ public class DragonFragment extends Fragment {
                 antiDragonHealthLayoutParams.weight = 1.0F - healthPercent;
             }
 
-            ((TextView) _view.findViewById(R.id.dragon_health)).setText(Util.formatNumberString(dragonHealth));
+            ((TextView) _view.findViewById(R.id.dragon_health)).setText(StringUtil.formatNumberString(dragonHealth));
         }
     }
 
@@ -263,14 +264,14 @@ public class DragonFragment extends Fragment {
 
         // ((TextView) _view.findViewById(R.id.dragon_kingdom_name)).setText(_session.getKingdom().getName());
 
-        ((TextView) _view.findViewById(R.id.dragon_cost)).setText(Util.formatNumberString(kingdom.getDragonCostRemaining()));
+        ((TextView) _view.findViewById(R.id.dragon_cost)).setText(StringUtil.formatNumberString(kingdom.getDragonCostRemaining()));
 
-        ((TextView) _view.findViewById(R.id.dragon_fund_dragon_gc_available)).setText(Util.formatNumberString(province.getMoney()));
+        ((TextView) _view.findViewById(R.id.dragon_fund_dragon_gc_available)).setText(StringUtil.formatNumberString(province.getMoney()));
 
-        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_soldiers)).setText(Util.formatNumberString(province.getSoldiers()));
-        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_offensive_units)).setText(Util.formatNumberString(province.getOffensiveUnits()));
-        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_defensive_units)).setText(Util.formatNumberString(province.getDefensiveUnits()));
-        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_elites)).setText(Util.formatNumberString(province.getElites()));
+        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_soldiers)).setText(StringUtil.formatNumberString(province.getSoldiers()));
+        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_offensive_units)).setText(StringUtil.formatNumberString(province.getOffensiveUnits()));
+        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_defensive_units)).setText(StringUtil.formatNumberString(province.getDefensiveUnits()));
+        ((TextView) _view.findViewById(R.id.dragon_attack_dragon_current_elites)).setText(StringUtil.formatNumberString(province.getElites()));
 
         if (kingdom.hasDragon()) {
             _view.findViewById(R.id.dragon_tab_layout).setVisibility(View.VISIBLE);

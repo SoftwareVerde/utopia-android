@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
 import com.softwareverde.utopia.database.AndroidKeyValueStore;
 import com.softwareverde.utopia.database.KeyValueStore;
 import com.softwareverde.utopia.ui.ChevronAnimation;

@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.softwareverde.util.Dialog;
-import com.softwareverde.util.Util;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Building;
 import com.softwareverde.utopia.R;
 import com.softwareverde.utopia.Session;

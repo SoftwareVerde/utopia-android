@@ -1,6 +1,7 @@
 package com.softwareverde.utopia.news;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.Province;
 
 public class NewsMiscEvent extends NewsEvent {
@@ -31,7 +32,7 @@ public class NewsMiscEvent extends NewsEvent {
     private void _parse() {
         if (_news.contains("Our people decided to explore")) {
             _miscEventType = MiscEventType.GRANTED_ACRES;
-            _newAcres = Util.parseInt(Util.pregMatch(".*have settled ([0-9,]+) acres of new land.*", _news).get(0));
+            _newAcres = Util.parseInt(StringUtil.pregMatch(".*have settled ([0-9,]+) acres of new land.*", _news).get(0));
             return;
         }
 
@@ -41,7 +42,7 @@ public class NewsMiscEvent extends NewsEvent {
         }
 
         if (_news.contains("men deserted our military due to housing shortages")) {
-            final Integer militaryLost = _firstItemOrNull(Util.pregMatch("([0-9,]+) men deserted our military", _news));
+            final Integer militaryLost = _firstItemOrNull(StringUtil.pregMatch("([0-9,]+) men deserted our military", _news));
             if (militaryLost != null) {
                 _desertedMilitary = Util.coalesce(_desertedMilitary) - militaryLost;
             }
@@ -57,18 +58,18 @@ public class NewsMiscEvent extends NewsEvent {
         }
 
         if (_news.contains("We have received a shipment of")) {
-            _goldReceived = _firstItemOrNull(Util.pregMatch(".*shipment of.* ([0-9,]+) gold coin.*", _news));
-            _foodReceived = _firstItemOrNull(Util.pregMatch(".*shipment of.* ([0-9,]+) bushel.*", _news));
-            _runesReceived = _firstItemOrNull(Util.pregMatch(".*shipment of.* ([0-9,]+) rune.*", _news));
-            _soldiersReceived = _firstItemOrNull(Util.pregMatch(".*shipment of.* ([0-9,]+) soldier.*", _news));
+            _goldReceived = _firstItemOrNull(StringUtil.pregMatch(".*shipment of.* ([0-9,]+) gold coin.*", _news));
+            _foodReceived = _firstItemOrNull(StringUtil.pregMatch(".*shipment of.* ([0-9,]+) bushel.*", _news));
+            _runesReceived = _firstItemOrNull(StringUtil.pregMatch(".*shipment of.* ([0-9,]+) rune.*", _news));
+            _soldiersReceived = _firstItemOrNull(StringUtil.pregMatch(".*shipment of.* ([0-9,]+) soldier.*", _news));
 
-            _aidTaxRate = _firstItemOrNull(Util.pregMatch("Trade deficit taxes cost us ([0-9]+)% of the shipment", _news));
+            _aidTaxRate = _firstItemOrNull(StringUtil.pregMatch("Trade deficit taxes cost us ([0-9]+)% of the shipment", _news));
 
             _miscEventType = MiscEventType.AID;
             return;
         }
         if (_news.contains("An aid shipment was sent by") && _news.contains("but did not reach our lands")) {
-            _aidTaxRate = _firstItemOrNull(Util.pregMatch("Trade deficit taxes cost us ([0-9]+)% of the shipment", _news));
+            _aidTaxRate = _firstItemOrNull(StringUtil.pregMatch("Trade deficit taxes cost us ([0-9]+)% of the shipment", _news));
 
             _miscEventType = MiscEventType.AID;
             return;

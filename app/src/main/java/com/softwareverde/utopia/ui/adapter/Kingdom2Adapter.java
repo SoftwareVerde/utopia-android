@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.softwareverde.util.Util;
+import com.softwareverde.util.StringUtil;
 import com.softwareverde.utopia.ActiveSpell;
 import com.softwareverde.utopia.Province;
 import com.softwareverde.utopia.R;
@@ -76,8 +76,8 @@ public class Kingdom2Adapter extends BaseAdapter {
         final UiTheme uiTheme = UiTheme.getThemeForRace(province.getRace());
 
         ((TextView) view.findViewById(R.id.kingdom_item_name)).setText(province.getName());
-        ((TextView) view.findViewById(R.id.kingdom_item_acres)).setText(Util.formatNumberString(province.getAcres()));
-        ((TextView) view.findViewById(R.id.kingdom_item_networth)).setText(Util.formatNumberString(province.getNetworth()));
+        ((TextView) view.findViewById(R.id.kingdom_item_acres)).setText(StringUtil.formatNumberString(province.getAcres()));
+        ((TextView) view.findViewById(R.id.kingdom_item_networth)).setText(StringUtil.formatNumberString(province.getNetworth()));
 
         final VerdeIntelUtil.AvailableIntel availableIntel = _session.getVerdeIntelCountsForProvince(province.getName(), province.getKingdomIdentifier());
         final View intelCountView = view.findViewById(R.id.kingdom_item_verde_intel_count);

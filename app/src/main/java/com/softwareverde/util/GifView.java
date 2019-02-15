@@ -6,6 +6,8 @@ import android.graphics.Movie;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.softwareverde.utopia.Util;
+
 import java.io.InputStream;
 
 public class GifView extends View {
@@ -50,15 +52,15 @@ public class GifView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        setMeasuredDimension(Util.coalesce(_movieWidth, 0), Util.coalesce(_movieHeight, 0));
+        setMeasuredDimension(com.softwareverde.utopia.Util.coalesce(_movieWidth, 0), com.softwareverde.utopia.Util.coalesce(_movieHeight, 0));
     }
 
     public int getMovieWidth() {
-        return Util.coalesce(_movieWidth, 0);
+        return com.softwareverde.utopia.Util.coalesce(_movieWidth, 0);
     }
 
     public int getMovieHeight() {
-        return Util.coalesce(_movieHeight, 0);
+        return com.softwareverde.utopia.Util.coalesce(_movieHeight, 0);
     }
 
     public long getMovieDuration() {

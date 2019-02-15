@@ -1,10 +1,10 @@
 package com.softwareverde.utopia.intelsync;
 
-import com.softwareverde.util.Json;
-import com.softwareverde.util.Util;
+import com.softwareverde.json.Json;
 import com.softwareverde.util.WebRequest;
 import com.softwareverde.utopia.Kingdom;
 import com.softwareverde.utopia.Settings;
+import com.softwareverde.utopia.Util;
 import com.softwareverde.utopia.bundle.Bundle;
 import com.softwareverde.utopia.bundle.BundleFactory;
 import com.softwareverde.utopia.util.Base64Util;
